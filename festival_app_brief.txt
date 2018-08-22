@@ -1,0 +1,19 @@
+Festival App
+
+
+Goal: Create a web application in Spark with Hibernate/Java back end
+You have been asked to create a web app to allow the management of a Festival manage the artists and visitor tracking. (No expense spared)
+
+
+MVP
+
+The user must be able to add venues/stages, add / remove artists to venues (line-up), feed/water/pay artists. You should also be able to transfer artists between venues/stages.
+
+
+Project Extensions
+•	Artists marked as musicians can perform in the same venue but those marked as comedians can only be placed with artists of the same type.
+•	Artists can randomly rampage and break out of their venues.
+•	Visitors can enter / exit the festivals if the artists are not rampaging.
+•	View the number of visitors checked into the festival at a given time.
+•	Anything else you can dream up!
+
