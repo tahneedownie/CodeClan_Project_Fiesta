@@ -14,10 +14,11 @@
         <property name="hbm2ddl.auto">create-drop</property>
         <property name="show_sql">true</property>
 
-        <mapping class = "models.Book"/>
-        <mapping class = "models.Borrower"/>
-        <mapping class = "models.Library"/>
-
+        <mapping class = "models.Act"/>
+        <mapping class = "models.Artist"/>
+        <mapping class = "models.Ticket"/>
+        <mapping class = "models.Venue"/>
+        <mapping class = "models.Visitor"/>
 
     </session-factory>
 </hibernate-configuration>
