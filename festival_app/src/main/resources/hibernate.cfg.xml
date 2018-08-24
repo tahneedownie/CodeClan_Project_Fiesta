@@ -14,8 +14,10 @@
         <property name="hbm2ddl.auto">create-drop</property>
         <property name="show_sql">true</property>
 
-        <mapping class = "models.Performance"/>
         <mapping class = "models.Artist"/>
+        <mapping class = "models.LineUp"/>
+        <mapping class = "models.MusicGenreType"/>
+        <mapping class = "models.Performance"/>
         <mapping class = "models.Venue"/>
         <mapping class = "models.Visitor"/>
 

@@ -1,8 +1,6 @@
 package models;
 
-import interfaces.iPerformable;
-
-public abstract class Artist implements iPerformable {
+public abstract class Artist {
 
     private int id;
     private String name;
@@ -56,11 +54,6 @@ public abstract class Artist implements iPerformable {
 
     public void setPerformance(Performance performance) {
         this.performance = performance;
-    }
-
-    @Override
-    public boolean perform() {
-        return true;
     }
 
 }

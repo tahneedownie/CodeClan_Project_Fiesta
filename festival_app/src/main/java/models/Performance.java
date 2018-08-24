@@ -1,7 +1,5 @@
 package models;
 
-import interfaces.iPerformable;
-
 import java.sql.Time;
 import java.util.List;
 
@@ -10,18 +8,17 @@ public class Performance {
     private int id;
     private Time time;
     private int duration;
-    private iPerformable iPerform;
     private LineUp lineup;
+    private List<Artist> artists;
     private List<Visitor> visitors;
 
 
     public Performance() {
     }
 
-    public Performance(Time time, int duration, iPerformable iPerform, LineUp lineup) {
+    public Performance(Time time, int duration, LineUp lineup) {
         this.time = time;
         this.duration = duration;
-        this.iPerform = iPerform;
         this.lineup = lineup;
     }
 
@@ -49,21 +46,20 @@ public class Performance {
         this.duration = duration;
     }
 
-
-    public iPerformable getiPerform() {
-        return iPerform;
-    }
-
-    public void setiPerform(iPerformable iPerform) {
-        this.iPerform = iPerform;
-    }
-
     public LineUp getLineup() {
         return lineup;
     }
 
     public void setLineup(LineUp lineup) {
         this.lineup = lineup;
+    }
+
+    public List<Artist> getArtists() {
+        return artists;
+    }
+
+    public void setArtists(List<Artist> artists) {
+        this.artists = artists;
     }
 
     public List<Visitor> getVisitors() {
