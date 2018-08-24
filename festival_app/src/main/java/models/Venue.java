@@ -9,7 +9,6 @@ public class Venue {
     private String name;
     private String location;
     private int visitorCapacity;
-    private List<Act> acts;
 
     public Venue() {
     }
@@ -18,7 +17,6 @@ public class Venue {
         this.name = name;
         this.location = location;
         this.visitorCapacity = visitorCapacity;
-        this.acts = new ArrayList<>();
     }
 
     public int getId() {
@@ -51,14 +49,6 @@ public class Venue {
 
     public void setVisitorCapacity(int visitorCapacity) {
         this.visitorCapacity = visitorCapacity;
-    }
-
-    public List<Act> getActs() {
-        return acts;
-    }
-
-    public void setActs(List<Act> acts) {
-        this.acts = acts;
     }
 
 }

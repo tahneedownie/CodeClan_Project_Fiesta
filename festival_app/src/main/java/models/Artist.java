@@ -1,21 +1,25 @@
 package models;
 
-public abstract class Artist {
+import interfaces.iPerformable;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "artists")
+public abstract class Artist implements iPerformable {
 
     private int id;
     private String name;
     private String manager;
     private double account;
-    private Act act;
 
     public Artist() {
     }
 
-    public Artist(String name, String manager, double account, Act act) {
+    public Artist(String name, String manager, double account, Performance performance) {
         this.name = name;
         this.manager = manager;
         this.account = account;
-        this.act = act;
     }
 
     public int getId() {
@@ -50,12 +54,9 @@ public abstract class Artist {
         this.account = account;
     }
 
-    public Act getAct() {
-        return act;
-    }
-
-    public void setAct(Act act) {
-        this.act = act;
+    @Override
+    public boolean perform() {
+        return true;
     }
 
 }

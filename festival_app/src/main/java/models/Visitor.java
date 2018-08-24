@@ -8,7 +8,7 @@ public class Visitor {
     private int id;
     private String firstName;
     private String lastName;
-    private List<Ticket> tickets;
+    private List<Performance> performances;
 
     public Visitor() {
     }
@@ -16,7 +16,6 @@ public class Visitor {
     public Visitor(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.tickets = new ArrayList<>();
     }
 
     public int getId() {
@@ -43,12 +42,11 @@ public class Visitor {
         this.lastName = lastName;
     }
 
-    public List<Ticket> getTickets() {
-        return tickets;
+    public List<Performance> getPerformances() {
+        return performances;
     }
 
-    public void setTickets(List<Ticket> tickets) {
-        this.tickets = tickets;
+    public void setPerformances(List<Performance> performances) {
+        this.performances = performances;
     }
-
 }
