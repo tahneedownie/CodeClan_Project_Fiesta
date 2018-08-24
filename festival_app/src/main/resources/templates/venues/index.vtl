@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Capacity</th>
+    </tr>
+
+
+    #foreach ($venue in $venues)
+    <tr>
+        <td>$venue.getName()</td>
+        <td>$venue.getLocation()</td>
+        <td>$venue.getCapacity()</td>
+    <tr>
+        #end
+
+</table>
+
+
