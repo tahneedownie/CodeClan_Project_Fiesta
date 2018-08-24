@@ -49,6 +49,7 @@ public class Performance {
         this.duration = duration;
     }
 
+
     public iPerformable getiPerform() {
         return iPerform;
     }
