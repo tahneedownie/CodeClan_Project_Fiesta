@@ -12,7 +12,7 @@ public class Venue {
     private String name;
     private String location;
     private int visitorCapacity;
-    private List<LineUp> lineUps;
+//    private List<LineUp> lineUps;
 
     public Venue() {
     }
@@ -21,7 +21,7 @@ public class Venue {
         this.name = name;
         this.location = location;
         this.visitorCapacity = visitorCapacity;
-        this.lineUps = new ArrayList<>();
+//        this.lineUps = new ArrayList<>();
     }
 
     @Id
@@ -44,7 +44,7 @@ public class Venue {
         this.name = name;
     }
 
-    @Column(name = "Location")
+    @Column(name = "location")
     public String getLocation() {
         return location;
     }
@@ -62,13 +62,13 @@ public class Venue {
         this.visitorCapacity = visitorCapacity;
     }
 
-    @OneToMany(mappedBy = "venue", fetch = FetchType.LAZY)
-    public List<LineUp> getLineUps() {
-        return lineUps;
-    }
-
-    public void setLineUps(List<LineUp> lineUps) {
-        this.lineUps = lineUps;
-    }
+////    @OneToMany(mappedBy = "venue", fetch = FetchType.LAZY)
+//    public List<LineUp> getLineUps() {
+//        return lineUps;
+//    }
+//
+//    public void setLineUps(List<LineUp> lineUps) {
+//        this.lineUps = lineUps;
+//    }
 
 }

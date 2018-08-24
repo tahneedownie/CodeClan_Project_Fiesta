@@ -17,7 +17,7 @@ public class DBHelper {
         session = HibernateUtil.getSessionFactory().openSession();
         try {
             transaction = session.beginTransaction();
-            session.saveOrUpdate(object);
+            session.save(object);
             transaction.commit();
         } catch (HibernateException e) {
             transaction.rollback();

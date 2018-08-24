@@ -1,21 +1,18 @@
-<p class="pageHeader">All Event venues/stages/tents</p>
+<p class="pageHeader">Venue/Stage/Tent information</p>
 
 <table>
     <tr>
         <th>Name</th>
         <th>Location</th>
         <th>Capacity</th>
+
     </tr>
 
-
-    #foreach ($venue in $venues)
     <tr>
         <td>$venue.getName()</td>
         <td>$venue.getLocation()</td>
         <td>$venue.getCapacity()</td>
     <tr>
-        #end
 
 </table>
-
 

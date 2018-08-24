@@ -1,0 +1,16 @@
+<p class="pageHeader">Edit Venue</p>
+
+<form action="/venues/$venue.getId()" method="post">
+
+    <label for="name">Name:</label>
+    <input type="text" class="inputbox" name="name" required="true" id="name"/>
+
+    <label for="Location">Last name:</label>
+    <input type="text" class="inputbox" name="location" required="true" id="location">
+
+    <label for="visitorCapacity">Capacity:</label>
+    <input type="text" class="inputbox" name="visitorCapacity" required="true" id="visitorCapacity">
+
+    <input type="submit" value="Update" class="button">
+
+</form>

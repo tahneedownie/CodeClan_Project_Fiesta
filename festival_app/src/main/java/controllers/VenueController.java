@@ -74,12 +74,12 @@ public class VenueController {
             return null;
         });
 
-//        3. #SHOW : get '/className/:id'
+//        4. #SHOW : get '/className/:id'
 
         get("/venues/:id", (request, response) -> {
 
             int venueId = Integer.parseInt(request.params(":id"));
-            Venue venue = new Venue(name, location, visitorCapacity);
+            Venue venue = DBHelper.find(venueId, Venue.class);
 
             Map<String, Object> model = new HashMap<>();
 
@@ -90,12 +90,12 @@ public class VenueController {
 
         }, new VelocityTemplateEngine());
 
-//        4. #EDIT : get '/className/:id/edit'
+//        5. #EDIT : get '/className/:id/edit'
 
         get("/venues/:id/edit", (request, response) ->{
 
             int venueId = Integer.parseInt(request.params(":id"));
-            Venue venue = new Venue(name, location, visitorCapacity);
+            Venue venue = DBHelper.find(venueId, Venue.class);
 
             Map<String, Object> model = new HashMap<>();
 
@@ -106,7 +106,7 @@ public class VenueController {
 
         }, new VelocityTemplateEngine());
 
-//        5. #UPDATE : post '/className/:id'
+//        6. #UPDATE : post '/className/:id'
 
         post("/venues/:id", (request, response) -> {
 
@@ -116,7 +116,7 @@ public class VenueController {
 //            render the original itinerary template, passing it the updated list
 
             int venueId = Integer.parseInt(request.params(":id"));
-            Venue venue = new Venue(name, location, visitorCapacity);
+            Venue venue = DBHelper.find(venueId, Venue.class);
 
             String name = request.queryParams("name");
             String location = request.queryParams("location");
@@ -133,12 +133,12 @@ public class VenueController {
             return null;
         });
 
-//        6. #DESTROY : get '/className/:id/delete'
+//        7. #DESTROY : get '/className/:id/delete'
 
         get("/venues/:id/delete", (request, response) ->{
 
             int venueId = Integer.parseInt(request.params(":id"));
-            Venue venue = new Venue(name, location, visitorCapacity);
+            Venue venue = DBHelper.find(venueId, Venue.class);
 
             DBHelper.delete(venue);
 
