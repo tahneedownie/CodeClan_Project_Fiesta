@@ -8,6 +8,7 @@ public class MainController {
 
         Seeds.seedData();
         VenueController venueController = new VenueController();
+        LineUpController lineUpController = new LineUpController();
 
     }
 

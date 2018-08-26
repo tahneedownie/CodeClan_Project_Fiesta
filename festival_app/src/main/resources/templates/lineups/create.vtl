@@ -1,0 +1,17 @@
+<p class="pageHeader">New Line-Up</p>
+
+<form action="/lineups" method="post">
+
+    <label for="date">Date (dd-MM-yyy):</label>
+    <input type="text" class="inputbox" name="date" required="true" id="date"/>
+
+    <label for="venue">Venue:</label>
+    <select id="venue" name="venue">
+        #foreach( $venue in $venues )
+        <option value="$venue.getId()">$venue.getName()</option>
+        #end
+    </select>
+
+    <input type="submit" value="Save" class="button">
+
+</form>

@@ -8,7 +8,7 @@ public class Performance {
     private int id;
     private Time time;
     private int duration;
-    private LineUp lineup;
+    private LineUp lineUp;
     private List<Artist> artists;
     private List<Visitor> visitors;
 
@@ -16,10 +16,10 @@ public class Performance {
     public Performance() {
     }
 
-    public Performance(Time time, int duration, LineUp lineup) {
+    public Performance(Time time, int duration, LineUp lineUp) {
         this.time = time;
         this.duration = duration;
-        this.lineup = lineup;
+        this.lineUp = lineUp;
     }
 
     public int getId() {
@@ -46,12 +46,12 @@ public class Performance {
         this.duration = duration;
     }
 
-    public LineUp getLineup() {
-        return lineup;
+    public LineUp getLineUp() {
+        return lineUp;
     }
 
-    public void setLineup(LineUp lineup) {
-        this.lineup = lineup;
+    public void setLineUp(LineUp lineUp) {
+        this.lineUp = lineUp;
     }
 
     public List<Artist> getArtists() {

@@ -1,0 +1,21 @@
+<p class="pageHeader">List of Line-Ups</p>
+
+<table>
+    <tr>
+        <th>Line-Up ID</th>
+        <th>Date</th>
+        <th>Venue</th>
+    </tr>
+
+
+    #foreach ($lineUp in $lineUps)
+    <tr>
+        <td>$lineUp.getId()</td>
+        <td>$lineUp.getDate()</td>
+        <td>$lineUp.getVenue().getName()</td>
+    <tr>
+        #end
+
+</table>
+
+

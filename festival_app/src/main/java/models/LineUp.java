@@ -1,23 +1,31 @@
 package models;
 
-import java.util.Date;
+import javax.persistence.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.List;
 
+@Entity
+@Table(name = "lineups")
 public class LineUp {
 
     private int id;
-    private Date date;
+    private LocalDate date;
     private Venue venue;
     private List<Performance> performances;
 
     public LineUp() {
     }
 
-    public LineUp(Date date, Venue venue) {
+    public LineUp(LocalDate date, Venue venue) {
         this.date = date;
         this.venue = venue;
     }
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -26,14 +34,17 @@ public class LineUp {
         this.id = id;
     }
 
-    public Date getDate() {
+    @Column(name = "date")
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "venue_id", nullable = false)
     public Venue getVenue() {
         return venue;
     }
@@ -42,6 +53,7 @@ public class LineUp {
         this.venue = venue;
     }
 
+    @OneToMany(mappedBy = "lineUp", fetch = FetchType.LAZY)
     public List<Performance> getPerformances() {
         return performances;
     }
