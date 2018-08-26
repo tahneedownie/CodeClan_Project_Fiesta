@@ -1,21 +1,36 @@
 package models;
 
+import org.hibernate.annotations.Cascade;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "artists")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Artist {
 
     private int id;
-    private String name;
+    private String firstName;
+    private String lastName;
     private String manager;
     private double account;
-    private Performance performance;
+    private List<Performance> performances;
 
     public Artist() {
     }
 
-    public Artist(String name, String manager) {
-        this.name = name;
+    public Artist(String firstName, String lastName, String manager) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.manager = manager;
+        this.performances = new ArrayList<>();
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -24,14 +39,25 @@ public abstract class Artist {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    @Column(name = "firstName")
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
+    @Column(name = "lastName")
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @Column(name = "manager")
     public String getManager() {
         return manager;
     }
@@ -40,6 +66,7 @@ public abstract class Artist {
         this.manager = manager;
     }
 
+    @Column(name = "account")
     public double getAccount() {
         return account;
     }
@@ -48,12 +75,21 @@ public abstract class Artist {
         this.account = account;
     }
 
-    public Performance getPerformance() {
-        return performance;
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @ManyToMany
+    @JoinTable(name = "artist_performances",
+            joinColumns = {@JoinColumn(name = "artist_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "performance_id", nullable = false, updatable = false)})
+    public List<Performance> getPerformances() {
+        return performances;
     }
 
-    public void setPerformance(Performance performance) {
-        this.performance = performance;
+    public void setPerformances(List<Performance> performances) {
+        this.performances = performances;
+    }
+
+    public void addPerformance(Performance performance){
+        this.performances.add(performance);
     }
 
 }

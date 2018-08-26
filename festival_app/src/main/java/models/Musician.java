@@ -1,5 +1,11 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "musicians")
 public class Musician extends Artist {
 
     private MusicGenreType genre;
@@ -7,11 +13,12 @@ public class Musician extends Artist {
     public Musician() {
     }
 
-    public Musician(String name, String manager, MusicGenreType genre) {
-        super(name, manager);
+    public Musician(String firstName, String lastName, String manager, MusicGenreType genre) {
+        super(firstName, lastName, manager);
         this.genre = genre;
     }
 
+    @Column(name = "genre")
     public MusicGenreType getGenre() {
         return genre;
     }

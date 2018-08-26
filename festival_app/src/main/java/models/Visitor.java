@@ -1,8 +1,13 @@
 package models;
 
+import org.hibernate.annotations.Cascade;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "visitors")
 public class Visitor {
 
     private int id;
@@ -16,8 +21,12 @@ public class Visitor {
     public Visitor(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.performances = new ArrayList<>();
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -26,6 +35,7 @@ public class Visitor {
         this.id = id;
     }
 
+    @Column(name = "firstName")
     public String getFirstName() {
         return firstName;
     }
@@ -34,6 +44,7 @@ public class Visitor {
         this.firstName = firstName;
     }
 
+    @Column(name = "lastName")
     public String getLastName() {
         return lastName;
     }
@@ -42,6 +53,11 @@ public class Visitor {
         this.lastName = lastName;
     }
 
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @ManyToMany
+    @JoinTable(name = "visitor_performances",
+            joinColumns = {@JoinColumn(name = "visitor_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "performance_id", nullable = false, updatable = false)})
     public List<Performance> getPerformances() {
         return performances;
     }

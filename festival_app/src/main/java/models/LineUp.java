@@ -1,7 +1,6 @@
 package models;
 
 import javax.persistence.*;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.List;
 
