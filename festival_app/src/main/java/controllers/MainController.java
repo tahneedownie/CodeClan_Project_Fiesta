@@ -1,6 +1,7 @@
 package controllers;
 
 import db.Seeds;
+import models.Visitor;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
@@ -21,9 +22,11 @@ public class MainController {
         VenueController venueController = new VenueController();
         LineUpController lineUpController = new LineUpController();
         ArtistController artistController = new ArtistController();
-        MusicianController musicianController = new MusicianController();
         PerformanceController performanceController = new PerformanceController();
+        VisitorController visitorController = new VisitorController();
+        MusicianController musicianController = new MusicianController();
         ComedianController comedianController = new ComedianController();
+
 
 //      Getter for website main page
 
