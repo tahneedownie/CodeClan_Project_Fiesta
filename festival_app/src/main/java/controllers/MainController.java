@@ -22,6 +22,7 @@ public class MainController {
         LineUpController lineUpController = new LineUpController();
         ArtistController artistController = new ArtistController();
         MusicianController musicianController = new MusicianController();
+        ComedianController comedianController = new ComedianController();
 
 //      Getter for website main page
 
