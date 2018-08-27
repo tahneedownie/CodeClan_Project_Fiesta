@@ -13,8 +13,8 @@ public class Musician extends Artist {
     public Musician() {
     }
 
-    public Musician(String firstName, String lastName, String manager, MusicGenreType genre) {
-        super(firstName, lastName, manager);
+    public Musician(String firstName, String lastName, String type, String manager, MusicGenreType genre) {
+        super(firstName, lastName, type, manager);
         this.genre = genre;
     }
 

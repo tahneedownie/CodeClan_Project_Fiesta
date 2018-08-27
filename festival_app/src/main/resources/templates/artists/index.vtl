@@ -1,0 +1,23 @@
+<p class="pageHeader">List of Line-Ups</p>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Type</th>
+        <th>Manager</th>
+    </tr>
+
+
+    #foreach ($artist in $artists)
+    <tr>
+        <td>$artist.getFirstName()</td>
+        <td>$artist.getLastName()</td>
+        <td>$artist.getType()</td>
+        <td>$artist.getManager()</td>
+    <tr>
+        #end
+
+</table>
+
+

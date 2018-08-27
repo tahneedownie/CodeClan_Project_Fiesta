@@ -14,6 +14,7 @@ public abstract class Artist {
     private int id;
     private String firstName;
     private String lastName;
+    private String type;
     private String manager;
     private double account;
     private List<Performance> performances;
@@ -21,9 +22,10 @@ public abstract class Artist {
     public Artist() {
     }
 
-    public Artist(String firstName, String lastName, String manager) {
+    public Artist(String firstName, String lastName, String type, String manager) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.type = type;
         this.manager = manager;
         this.performances = new ArrayList<>();
     }
@@ -55,6 +57,15 @@ public abstract class Artist {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @Column(name = "type")
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Column(name = "manager")

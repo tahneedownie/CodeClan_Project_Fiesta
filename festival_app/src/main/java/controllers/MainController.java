@@ -7,8 +7,11 @@ public class MainController {
     public static void main(String[] args) {
 
         Seeds.seedData();
+
         VenueController venueController = new VenueController();
         LineUpController lineUpController = new LineUpController();
+        ArtistController artistController = new ArtistController();
+        MusicianController musicianController = new MusicianController();
 
     }
 
