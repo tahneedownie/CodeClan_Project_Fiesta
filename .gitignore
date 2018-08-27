@@ -6,24 +6,24 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+festival_app/.idea/**/workspace.xml
+festival_app/.idea/**/tasks.xml
+festival_app/.idea/**/usage.statistics.xml
+festival_app/.idea/**/dictionaries
+festival_app/.idea/**/shelf
 
 # Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
+festival_app/.idea/**/dataSources/
+festival_app/.idea/**/dataSources.ids
+festival_app/.idea/**/dataSources.local.xml
+festival_app/.idea/**/sqlDataSources.xml
+festival_app/.idea/**/dynamic.xml
+festival_app/.idea/**/uiDesigner.xml
+festival_app/.idea/**/dbnavigator.xml
 
 # Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
+festival_app/.idea/**/gradle.xml
+festival_app/.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
