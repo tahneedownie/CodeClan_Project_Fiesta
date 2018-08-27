@@ -4,6 +4,7 @@ import models.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Locale;
 
 public class Seeds {
 
@@ -73,18 +74,17 @@ public class Seeds {
         Performance performance5 = new Performance(LocalTime.of(8,0), 60, lineUp3);
         DBHelper.save(performance5);
 
+        Musician chvrches1 = new Musician("Lauren", "Mayberry", "Singer", "Chvrches manager", MusicGenreType.POP);
+        DBHelper.save(chvrches1);
+        Musician chvrches2 = new Musician("Iain", "Cook", "Guitar, Bass, Sampler", "Chvrches manager", MusicGenreType.POP);
+        DBHelper.save(chvrches2);
+        Musician chvrches3 = new Musician("Martin", "Doherty", "Keyboards", "Chvrches manager", MusicGenreType.POP);
+        DBHelper.save(chvrches3);
 
-
-
-
-
-
-        Musician bruno = new Musician("Bruno", "Mars", "Singer", "JayZ", MusicGenreType.POP);
-        DBHelper.save(bruno);
-
-        Musician dolly = new Musician("Dolly", "Parton", "Singer", "Kanye", MusicGenreType.COUNTRY);
-        DBHelper.save(dolly);
-
+        Comedian comedian1 = new Comedian("Reginald", "D Hunter", "Standup", "Reg Manager", Locale.US);
+        DBHelper.save(comedian1);
+        Comedian comedian2 = new Comedian("Frankie", "Boyle", "Standup", "Frankie", Locale.UK);
+        DBHelper.save(comedian2);
     }
 
 }
