@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>add_comedian</title>
+</head>
+<body>
+<img class= "icon" src="/images/artist_icon_medium_sea_green.png" alt="artist icon">
+<h2>New Comedian</h2>
+<form action="/comedians" method="post">
+    <div class="form_block">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" class="inputbox" name="firstName" required="true" id="firstName"/>
+        </div>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="inputbox" name="lastName" required="true" id="lastName"/>
+        </div>
+        <div>
+            <label for="type">Type:</label>
+            <input type="text" class="inputbox" name="type" required="true" id="type"/>
+        </div>
+        <div>
+            <label for="manager">Manager:</label>
+            <input type="text" class="inputbox" name="manager" required="true" id="manager"/>
+        </div>
+
+        <div>
+            <input class="submit_button_artist" type="submit" value="Submit"/>
+        </div>
+    </div>
+</form>
+</body>
+</html>
