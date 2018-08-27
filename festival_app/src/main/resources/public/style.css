@@ -1,9 +1,13 @@
 body {
   background-color: #FBFBFB;
 }
+
+
 nav {
   background-color: #FE6768;
 }
+
+
 .nav_menu_1 {
   list-style-type: none;
   display: inline-block;
@@ -12,6 +16,8 @@ nav {
   padding-bottom: 22px;
   margin-left: 0pt;
 }
+
+
 .logo {
     display: block;
     margin-left: auto;
@@ -23,6 +29,8 @@ nav {
     max-height: 130px;
     margin-top: 0px;
 }
+
+
 .nav_icons {
     display: block;
     margin-left: auto;
@@ -32,6 +40,31 @@ nav {
     max-height: 130px;
     margin-top: 0px;
 }
+
+
+.nav_menu_2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #837C8D;
+    margin-top: 15px;
+    padding-top: 200px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 0px;
+    color: white;
+    text-decoration: none;
+}
+
+
 .getting_started_image {
     display: block;
     margin-left: auto;
@@ -39,11 +72,8 @@ nav {
     margin-top: 8px;
     width: 100%;
 }
-footer {
-    background-color: #837C8D;
-    margin-top: 8px;
-    padding-top: 200px;
-}
+
+
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-size: 36px;
@@ -51,8 +81,10 @@ h1 {
     color: #FE6768;
     text-align: center;
     margin-top: 8px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
+
+
 h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 36px;
@@ -60,8 +92,10 @@ h2 {
     color: #3BB273;
     text-align: center;
     margin-top: 8px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
+
+
 h3 {
     font-family: 'Open Sans', sans-serif;
     font-size: 36px;
@@ -69,8 +103,10 @@ h3 {
     color: #17BEBB;
     text-align: center;
     margin-top: 8px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
+
+
 .icon {
     display: block;
     margin-left: auto;
@@ -80,6 +116,8 @@ h3 {
     max-height: 130px;
     margin-top: 22px;
 }
+
+
 .add_venue {
     display: block;
     margin-left: auto;
@@ -95,8 +133,10 @@ h3 {
     width: 140px;
     text-decoration: none;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
+
+
 .add_artist {
     display: block;
     margin-left: auto;
@@ -112,8 +152,29 @@ h3 {
     width: 140px;
     text-decoration: none;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
+
+
+.add_musician {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    color: white;
+    background-color: #3BB273;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left 10px;
+    padding-right 10px;
+    width: 165px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
 .add_visitor {
     display: block;
     margin-left: auto;
@@ -129,11 +190,15 @@ h3 {
     width: 140px;
     text-decoration: none;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
+
+
 .form_block {
   margin-top: 30px;
 }
+
+
 label {
   font-family: 'Open Sans', sans-serif;
   font-size: 16pt;
@@ -142,20 +207,28 @@ label {
   margin-left: 25PX;
   margin-bottom: 5px;
 }
+
+
 input, select {
   width: 210px;
   height: 30px;
   margin-bottom: 10px;
   margin-left: 25PX;
 }
+
+
 .capacity {
   width: 120px;
   margin-bottom: 20px;
 }
+
+
 .performance {
   width: 240px;
   margin-bottom: 20px;
 }
+
+
 .submit_button_venue {
   width: 90px;
   height: 40px;
@@ -168,6 +241,8 @@ input, select {
   color: white;
   padding-bottom: 5px;
 }
+
+
 .submit_button_artist {
   width: 90px;
   height: 40px;
@@ -180,6 +255,8 @@ input, select {
   color: white;
   padding-bottom: 5px;
 }
+
+
 .submit_button_visitor {
   width: 90px;
   height: 40px;
