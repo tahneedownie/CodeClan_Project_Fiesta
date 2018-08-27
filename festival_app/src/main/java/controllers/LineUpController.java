@@ -6,9 +6,7 @@ import models.Venue;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -121,7 +119,7 @@ public class LineUpController {
 
         post("/lineups/:id", (request, response) -> {
 
-//            Get the new/updated parameters for the venue(find by id) from the form
+//            Get the new/updated parameters for the Line Up(find by id) from the form
 //            Update the LineUp object from that form (set values)
 //            add the new LineUp object to the list (use DBHelper to save/update venue to db)
 //            render the original itinerary template, passing it the updated list

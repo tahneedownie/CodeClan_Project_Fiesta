@@ -4,6 +4,7 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
 public class Performance {
 
     private int id;
-    private Time time;
+    private LocalTime time;
     private int duration;
     private LineUp lineUp;
     private List<Artist> artists;
@@ -22,7 +23,7 @@ public class Performance {
     public Performance() {
     }
 
-    public Performance(Time time, int duration, LineUp lineUp) {
+    public Performance(LocalTime time, int duration, LineUp lineUp) {
         this.time = time;
         this.duration = duration;
         this.lineUp = lineUp;
@@ -42,11 +43,11 @@ public class Performance {
     }
 
     @Column
-    public Time getTime() {
+    public LocalTime getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(LocalTime time) {
         this.time = time;
     }
 
@@ -90,8 +91,8 @@ public class Performance {
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @ManyToMany
     @JoinTable(name = "performance_visitors",
-            joinColumns = {@JoinColumn(name = "performance_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name = "visitor_id", nullable = false, updatable = false)})
+            joinColumns = {@JoinColumn(name = "performance_id", updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "visitor_id", updatable = false)})
     public List<Visitor> getVisitors() {
         return visitors;
     }

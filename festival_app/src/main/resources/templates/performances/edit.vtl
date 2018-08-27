@@ -1,0 +1,20 @@
+<p class="pageHeader">Edit Performance</p>
+
+<form action="/performances/$performance.getId()" method="post">
+
+    <label for="time">Time (hh:mm):</label>
+    <input type="text" class="inputbox" name="time" required="true" id="time"/>
+
+    <label for="duration">Duration:</label>
+    <input type="text" class="inputbox" name="duration" required="true" id="duration"/>
+
+    <label for="lineUp">LineUp (Date):</label>
+    <select id="lineUp" name="lineUp">
+        #foreach( $lineUp in $lineUps )
+        <option value="$lineUp.getId()">$lineUp.getDate()</option>
+        #end
+    </select>
+
+    <input type="submit" value="Update" class="button">
+
+</form>
