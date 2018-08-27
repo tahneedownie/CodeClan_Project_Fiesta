@@ -41,14 +41,13 @@ public enum MusicGenreType {
     DRUMANDBASS("Drum & Bass"),
     ELECTRO("Electro");
 
-    private String genre;
+    private String genreName;
 
-    MusicGenreType(String genre) {
-        this.genre = genre;
+    MusicGenreType(String genreName) {
+        this.genreName = genreName;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getGenreName() {
+        return genreName;
     }
-
 }

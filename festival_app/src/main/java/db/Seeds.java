@@ -1,7 +1,6 @@
 package db;
 
-import models.LineUp;
-import models.Venue;
+import models.*;
 
 import java.time.LocalDate;
 
@@ -14,6 +13,8 @@ public class Seeds {
 
         DBHelper.deleteAll(Venue.class);
         DBHelper.deleteAll(LineUp.class);
+        DBHelper.deleteAll(Artist.class);
+        DBHelper.deleteAll(Musician.class);
 
         Venue assembly = new Venue("Assembly George Square Gardens", "George Square, EH8 9LH", 10000);
         DBHelper.save(assembly);
@@ -29,8 +30,11 @@ public class Seeds {
         LineUp gildedballoon2608 = new LineUp(LocalDate.of(2018,8,24), gildedballoon);
         DBHelper.save(gildedballoon2608);
 
+        Musician bruno = new Musician("Bruno", "Mars", "Singer", "JayZ", MusicGenreType.POP);
+        DBHelper.save(bruno);
 
-
+        Musician dolly = new Musician("Dolly", "Parton", "Singer", "Kanye", MusicGenreType.COUNTRY);
+        DBHelper.save(dolly);
 
     }
 

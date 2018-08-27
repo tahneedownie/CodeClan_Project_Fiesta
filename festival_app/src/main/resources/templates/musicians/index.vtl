@@ -1,4 +1,16 @@
-<p class="pageHeader">All Musicians</p>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musicians</title>
+</head>
+<body>
+<img class= "icon" src="/images/artist_icon_medium_sea_green.png" alt="artist icon">
+<h2>Musicians</h2>
 
 <table>
     <tr>
@@ -6,18 +18,22 @@
         <th>Last Name</th>
         <th>Manager</th>
         <th>Genre</th>
-    </tr>
 
+    </tr>
 
     #foreach ($musician in $musicians)
     <tr>
-        <td>$musician.getFirstName()</td>
+        <td><a href="/musicians/$musician.getId()">$musician.getFirstName()</a></td>
         <td>$musician.getLastName()</td>
         <td>$musician.getManager()</td>
-        <td>$musician.getGenre()</td>
+        <td>$musician.getGenre().getGenreName()</td>
     <tr>
         #end
 
 </table>
+
+<a class="add_artist" href="/musicians/new"> New Musician </a>
+</body>
+</html>
 
 
