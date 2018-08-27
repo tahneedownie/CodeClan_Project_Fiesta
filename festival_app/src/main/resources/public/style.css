@@ -1,0 +1,194 @@
+body {
+  background-color: #FBFBFB;
+}
+nav {
+  background-color: #FE6768;
+}
+.nav_menu_1 {
+  list-style-type: none;
+  display: inline-block;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  margin-left: 0pt;
+}
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 85%;
+    max-width: 130px;
+    max-height: 130px;
+    margin-top: 0px;
+}
+.nav_icons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26%;
+    max-width: 130px;
+    max-height: 130px;
+    margin-top: 0px;
+}
+.getting_started_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    width: 100%;
+}
+footer {
+    background-color: #837C8D;
+    margin-top: 8px;
+    padding-top: 200px;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 0px;
+    color: #FE6768;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 0px;
+    color: #3BB273;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 0px;
+    color: #17BEBB;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    max-width: 130px;
+    max-height: 130px;
+    margin-top: 22px;
+}
+.add_venue {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    color: white;
+    background-color: #FE6768;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left 10px;
+    padding-right 10px;
+    width: 140px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 200px;
+}
+.add_artist {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    color: white;
+    background-color: #3BB273;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left 10px;
+    padding-right 10px;
+    width: 140px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 200px;
+}
+.add_visitor {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    color: white;
+    background-color: #17BEBB;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left 10px;
+    padding-right 10px;
+    width: 140px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 200px;
+}
+.form_block {
+  margin-top: 30px;
+}
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  color: #2D2926;
+  display: block;
+  margin-left: 25PX;
+  margin-bottom: 5px;
+}
+input, select {
+  width: 210px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-left: 25PX;
+}
+.capacity {
+  width: 120px;
+  margin-bottom: 20px;
+}
+.performance {
+  width: 240px;
+  margin-bottom: 20px;
+}
+.submit_button_venue {
+  width: 90px;
+  height: 40px;
+  background-color: #FE6768;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+}
+.submit_button_artist {
+  width: 90px;
+  height: 40px;
+  background-color: #3BB273;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+}
+.submit_button_visitor {
+  width: 90px;
+  height: 40px;
+  background-color: #17BEBB;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+}

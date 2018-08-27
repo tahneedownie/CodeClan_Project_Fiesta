@@ -42,7 +42,6 @@ public class Performance {
     }
 
     @Column
-    @Temporal(TemporalType.TIME)
     public Time getTime() {
         return time;
     }
