@@ -7,6 +7,11 @@ nav {
   background-color: #FE6768;
 }
 
+.nav_over_ride {
+  background-color: #837C8D;
+  margin-left: 21px;
+}
+
 
 .nav_menu_1 {
   list-style-type: none;
@@ -31,7 +36,18 @@ nav {
 }
 
 
-.nav_icons {
+.scroll_icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26%;
+    max-width: 130px;
+    max-height: 130px;
+    margin-top: 0px;
+}
+
+
+.search_icon {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -43,18 +59,23 @@ nav {
 
 
 .nav_menu_2 {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
     color: white;
     text-decoration: none;
     text-align: center;
+    margin-left: 0px;
+    margin-right: 30px;
 }
 
 
 footer {
     background-color: #837C8D;
-    margin-top: 15px;
-    padding-top: 200px;
+    margin-top: 11px;
+    padding-top: 180px;
     padding-bottom: 10px;
     padding-left: 10px;
     font-family: 'Open Sans', sans-serif;
@@ -69,7 +90,7 @@ footer {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8px;
+    margin-top: 11px;
     width: 100%;
 }
 
@@ -153,6 +174,7 @@ h3 {
     text-decoration: none;
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 
@@ -172,6 +194,7 @@ h3 {
     text-decoration: none;
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 
@@ -191,12 +214,20 @@ h3 {
     text-decoration: none;
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 
 .form_block {
-  margin-top: 30px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  background-image: url(/images/form_background_image_merry_L2.jpg);
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
 }
+
 
 
 label {
@@ -253,7 +284,7 @@ input, select {
   text-align: center;
   text-decoration: none;
   color: white;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 
@@ -269,3 +300,9 @@ input, select {
   color: white;
   padding-bottom: 5px;
 }
+
+.select_button {
+    background: white;
+    text-decoration: none;
+}
+
