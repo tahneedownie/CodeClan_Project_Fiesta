@@ -3,6 +3,13 @@ body {
 }
 
 
+.nav_1 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
 nav {
   background-color: #FE6768;
 }
