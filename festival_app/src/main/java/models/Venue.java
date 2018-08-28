@@ -74,15 +74,15 @@ public class Venue {
 
     public void addLineUpToVenue(LineUp lineUp){
 //        A venue cannot have multiple lineups on same date
-//        A venue has lots of lineups but only one lineUp per date
-//        get array list of lineup dates
-//        if the lineup you are trying to add has the same date you cannot add it
-
-        LocalDate dates[] = new LocalDate[this.lineUps.size()];
-        for (int i = 0; i < dates.length; i++) {
-            dates[i] = this.lineUps.get(i).getDate();
-            }
-        }
+////        A venue has lots of lineups but only one lineUp per date
+////        get array list of lineup dates
+////        if the lineup you are trying to add has the same date you cannot add it
+//
+//        LocalDate dates[] = new LocalDate[this.lineUps.size()];
+//        for (int i = 0; i < dates.length; i++) {
+//            dates[i] = this.lineUps.get(i).getDate();
+//            }
+//        }
 
 
         this.lineUps.add(lineUp);
