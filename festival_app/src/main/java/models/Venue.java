@@ -1,5 +1,8 @@
 package models;
 
+import db.DBHelper;
+import db.DBVenue;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -72,24 +75,38 @@ public class Venue {
         this.lineUps = lineUps;
     }
 
-    public void addLineUpToVenue(LineUp lineUp){
+    public boolean isThereADateAlready(LineUp lineUp){
+        LocalDate potentialDate = lineUp.getDate();
+        for(LineUp each_lineUp : lineUps){
+            if(each_lineUp.getDate().equals(potentialDate)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isThisLineupAlreadyAtaVenue(LineUp lineUp){
+        List<Venue> allVenues = DBHelper.getAll(Venue.class);
+        for(Venue each_venue: allVenues){
+            for(LineUp each_lineup : each_venue.getLineUps()){
+                if(each_lineup.equals(lineUp)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean addLineUpToVenue(LineUp lineUp){
 //        A venue cannot have multiple lineups on same date
 //        A venue has lots of lineups but only one lineUp per date
 //        get array list of lineup dates
 //        if the lineup you are trying to add has the same date you cannot add it
-
-        LocalDate dates[] = new LocalDate[this.lineUps.size()];
-        for (int i = 0; i < dates.length; i++) {
-            dates[i] = this.lineUps.get(i).getDate();
-            }
+        if(!isThereADateAlready(lineUp) || isThisLineupAlreadyAtaVenue(lineUp)){
+            lineUps.add(lineUp);
+            return true;
         }
-
-
-        this.lineUps.add(lineUp);
+        return false;
     }
-
-
-
-
 
 }

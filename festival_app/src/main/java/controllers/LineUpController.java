@@ -67,12 +67,12 @@ public class LineUpController {
 //            add the new LineUp object to the list
 //            render the original itinerary template, passing it the updated list
 
-            int venueId = Integer.parseInt(request.queryParams("venue"));
-            Venue venue = DBHelper.find(venueId, Venue.class);
+//            int venueId = Integer.parseInt(request.queryParams("venue"));
+//            Venue venue = DBHelper.find(venueId, Venue.class);
 
             LocalDate date = LocalDate.parse(request.queryParams("date"));
 
-            LineUp lineUp = new LineUp(date, venue);
+            LineUp lineUp = new LineUp(date);
             DBHelper.save(lineUp);
 
             response.redirect("/lineups");
@@ -135,7 +135,7 @@ public class LineUpController {
             Venue venue = DBHelper.find(venueId, Venue.class);
 
             lineUp.setDate(date);
-            lineUp.setVenue(venue);
+//            lineUp.setVenue(venue);
 
             DBHelper.save(lineUp);
 

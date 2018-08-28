@@ -16,9 +16,8 @@ public class LineUp {
     public LineUp() {
     }
 
-    public LineUp(LocalDate date, Venue venue) {
+    public LineUp(LocalDate date) {
         this.date = date;
-        this.venue = venue;
     }
 
 
@@ -43,7 +42,7 @@ public class LineUp {
     }
 
     @ManyToOne
-    @JoinColumn(name = "venue_id", nullable = false)
+    @JoinColumn(name = "venue_id")
     public Venue getVenue() {
         return venue;
     }

@@ -43,29 +43,37 @@ public class Seeds {
         Visitor visitor10 = new Visitor("BumbleBee", "Ficek");
         DBHelper.save(visitor10);
 
-//        VENUES_________________________________________________________________________________________________
+//        LINEUPS___________________________________________________________________________________________________
+        LineUp lineUp1 = new LineUp(LocalDate.of(2018,8,24));
+        DBHelper.save(lineUp1);
+        LineUp lineUp2 = new LineUp(LocalDate.of(2018,8,25));
+        DBHelper.save(lineUp2);
+        LineUp lineUp3 = new LineUp(LocalDate.of(2018,8,26));
+        DBHelper.save(lineUp3);
+        LineUp lineUp4 = new LineUp(LocalDate.of(2018,8,24));
+        DBHelper.save(lineUp4);
+        LineUp lineUp5 = new LineUp(LocalDate.of(2018,8,25));
+        DBHelper.save(lineUp5);
+
+//      VENUES_________________________________________________________________________________________________
         Venue venue1 = new Venue("Assembly George Square Gardens", "George Square, EH8 9LH", 10000);
         DBHelper.save(venue1);
+        DBVenue.addLineUpToVenue(venue1, lineUp1);
+        DBVenue.addLineUpToVenue(venue1, lineUp2);
+        DBVenue.addLineUpToVenue(venue1, lineUp3);
+        DBVenue.addLineUpToVenue(venue1, lineUp4);
+
         Venue venue2 = new Venue("Bedlam Theatre", "11b Bristo Place, EH1 1EZ", 5000);
         DBHelper.save(venue2);
+
         Venue venue3 = new Venue("Dance Base", "14-16 Grassmarket, EH1 2JU", 2000);
         DBHelper.save(venue3);
+
         Venue venue4 = new Venue("Edinburgh Playhouse", "18-22 Greenside Place, EH1 3AA", 10000);
         DBHelper.save(venue4);
+
         Venue venue5 = new Venue("Gilded Balloon Teviot", "Teviot Row House, EH8 9AJ", 1000);
         DBHelper.save(venue5);
-
-//        LINEUPS___________________________________________________________________________________________________
-        LineUp lineUp1 = new LineUp(LocalDate.of(2018,8,24), venue1);
-        DBHelper.save(lineUp1);
-        LineUp lineUp2 = new LineUp(LocalDate.of(2018,8,25), venue2);
-        DBHelper.save(lineUp2);
-        LineUp lineUp3 = new LineUp(LocalDate.of(2018,8,26), venue3);
-        DBHelper.save(lineUp3);
-        LineUp lineUp4 = new LineUp(LocalDate.of(2018,8,24), venue4);
-        DBHelper.save(lineUp4);
-        LineUp lineUp5 = new LineUp(LocalDate.of(2018,8,25), venue5);
-        DBHelper.save(lineUp5);
 
 //        ARTISTS____________________________________________________________________________________________________
         Musician chvrches1 = new Musician("Lauren", "Mayberry", "Singer", "Chvrches manager", MusicGenreType.POP);
