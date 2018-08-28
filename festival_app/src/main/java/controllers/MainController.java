@@ -51,7 +51,6 @@ public class MainController {
 //    TODO: Make sure you can add artists to performances
 //    TODO: Make sure you can add performances to lineups as long as long as they do not have the same time as another performance
 //    TODO: Add ticket class make it nullable so some performances are chargeable
-//    TODO: Add manager class instead of string manager manager has an account
 //    TODO: Add logic for artists and managers to get paid by number of performances maybe both classes have a fee variable?
 //    TODO: Make sure that visitors can only be added to venues as long as the capacity is not exceeded
 //    TODO: Make sure that only visitors with tickets can be added to performances that are ticketed (ticket not nullable)
