@@ -2,14 +2,8 @@
 
 <form action="/lineups/$lineUp.getId()" method="post">
 
-    <label for="day">Day(dd):</label>
-    <input type="text" class="inputbox" name="day" required="true" id="day"/>
-
-    <label for="month">Month(mm):</label>
-    <input type="text" class="inputbox" name="month" required="true" id="month"/>
-
-    <label for="year">Year(yyyy):</label>
-    <input type="text" class="inputbox" name="year" required="true" id="year"/>
+    <form>
+        Date: <input type="date" name="date">
 
     <label for="venue">Venue:</label>
     <select id="venue" name="venue">
@@ -19,5 +13,6 @@
     </select>
 
     <input type="submit" value="Update" class="button">
+    </form>
 
 </form>
