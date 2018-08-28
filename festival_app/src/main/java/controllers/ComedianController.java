@@ -7,6 +7,7 @@ import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import static spark.Spark.get;
@@ -43,9 +44,13 @@ public class ComedianController {
             Map<String, Object> model = new HashMap<>();
 
             List<Comedian> comedians = DBHelper.getAll(Comedian.class);
+            Locale.Category[] nationalities = Locale.Category.values();
+
 
             model.put("template", "templates/comedians/create.vtl");
             model.put("comedians", comedians);
+            model.put("nationalities", nationalities);
+
 
             return new ModelAndView(model, "templates/layout.vtl");
 
@@ -67,8 +72,10 @@ public class ComedianController {
             String type = request.queryParams("type");
             String manager = request.queryParams("manager");
 
+            Locale.Category[] nationalities = Locale.Category.values();
+            Locale nationality = Locale.getDefault(Locale.Category.valueOf(request.queryParams("nationality")));
 
-            Comedian comedian = new Comedian(firstName, lastName, type, manager);
+            Comedian comedian = new Comedian(firstName, lastName, type, manager, nationality);
             DBHelper.save(comedian);
 
             response.redirect("/comedians");
@@ -76,24 +83,23 @@ public class ComedianController {
             return null;
         });
 
-
-
         //        4. #SHOW : get '/className/:id'
 
         get("/comedians/:id", (request, response) -> {
 
             int comedianId = Integer.parseInt(request.params(":id"));
             Comedian comedian = DBHelper.find(comedianId, Comedian.class);
+            Locale.Category[] nationalities = Locale.Category.values();
 
             Map<String, Object> model = new HashMap<>();
 
             model.put("template", "templates/comedians/show.vtl");
             model.put("comedian", comedian);
+            model.put("nationalities", nationalities);
 
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());
-
 
 
         //        5. #EDIT : get '/className/:id/edit'
@@ -102,16 +108,17 @@ public class ComedianController {
 
             int comedianId = Integer.parseInt(request.params(":id"));
             Comedian comedian = DBHelper.find(comedianId, Comedian.class);
+            Locale.Category[] nationalities = Locale.Category.values();
 
             Map<String, Object> model = new HashMap<>();
 
             model.put("template", "templates/comedians/edit.vtl");
             model.put("comedian", comedian);
+            model.put("nationalities", nationalities);
 
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());
-
 
 
         //        6. #UPDATE : post '/className/:id'
@@ -131,10 +138,14 @@ public class ComedianController {
             String type = request.queryParams("type");
             String manager = request.queryParams("manager");
 
+            Locale.Category[] nationalities = Locale.Category.values();
+            Locale nationality = Locale.getDefault(Locale.Category.valueOf(request.queryParams("nationality")));
+
             comedian.setFirstName(firstName);
             comedian.setLastName(lastName);
             comedian.setType(type);
             comedian.setManager(manager);
+            comedian.setNationality(nationality);
 
             DBHelper.save(comedian);
 

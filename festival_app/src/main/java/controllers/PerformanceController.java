@@ -48,7 +48,7 @@ public class PerformanceController {
             List<Performance> performances = DBHelper.getAll(Performance.class);
             List<LineUp> lineUps = DBHelper.getAll(LineUp.class);
 
-            model.put("template", "templates/lineups/create.vtl");
+            model.put("template", "templates/performances/create.vtl");
             model.put("performances", performances);
             model.put("lineUps", lineUps);
 
@@ -89,7 +89,7 @@ public class PerformanceController {
 
             Map<String, Object> model = new HashMap<>();
 
-            model.put("template", "templates/lineups/show.vtl");
+            model.put("template", "templates/performances/show.vtl");
             model.put("performance", performance);
 
             return new ModelAndView(model, "templates/layout.vtl");

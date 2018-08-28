@@ -17,6 +17,7 @@
 
         <mapping class = "models.Artist"/>
         <mapping class = "models.Musician"/>
+        <mapping class = "models.Comedian"/>
         <mapping class = "models.LineUp"/>
         <mapping class = "models.MusicGenreType"/>
         <mapping class = "models.Performance"/>

@@ -19,6 +19,7 @@ public class Seeds {
         DBHelper.deleteAll(Performance.class);
         DBHelper.deleteAll(Artist.class);
         DBHelper.deleteAll(Musician.class);
+        DBHelper.deleteAll(Comedian.class);
 
         Visitor visitor1 = new Visitor("Digory", "Eyebrow");
         DBHelper.save(visitor1);

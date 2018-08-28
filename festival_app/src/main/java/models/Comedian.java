@@ -18,6 +18,7 @@ public class Comedian extends Artist {
     }
 
     @Column(name = "nationality")
+
     public Locale getNationality() {
         return nationality;
     }

@@ -14,6 +14,17 @@
     <label for="manager">Manager:</label>
     <input type="text" class="inputbox" name="manager" required="true" id="manager">
 
+    <div>
+        <label for="nationality">Nationality:</label>
+        <select name="nationality" id="nationality" required="true">
+            #foreach ($nationality in $nationalities)
+            <option value="$nationality">
+                $nationality.getCountry()
+            </option>
+            #end
+        </select>
+    </div>
+
     <input type="submit" value="Update" class="button">
 
 </form>
