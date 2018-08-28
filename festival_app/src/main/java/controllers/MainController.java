@@ -46,9 +46,8 @@ public class MainController {
 
 
 //    TODO: Check table relationships
-//    TODO: Fix time and date inputs
+//    TODO: Fix date inputs
 //    TODO: Create controllers and vtl files for remaining classes
-//    TODO: Check tables populate and controllers run
 //    TODO: Make sure you can add artists to performances
 //    TODO: Make sure you can add performances to lineups as long as long as they do not have the same time as another performance
 //    TODO: Add ticket class make it nullable so some performances are chargeable
