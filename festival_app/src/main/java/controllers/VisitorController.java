@@ -28,7 +28,7 @@ public class VisitorController {
 
             List<Visitor> visitors = DBHelper.getAll(Visitor.class);
 
-            model.put("template", "templates/artists/index.vtl");
+            model.put("template", "templates/visitors/index.vtl");
             model.put("visitors", visitors);
 
             return new ModelAndView(model, "templates/layout.vtl");

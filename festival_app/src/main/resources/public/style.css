@@ -146,6 +146,17 @@ h4 {
 }
 
 
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 0px;
+    color: #17BEBB;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
 .icon {
     display: block;
     margin-left: auto;
