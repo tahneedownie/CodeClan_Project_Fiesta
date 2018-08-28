@@ -44,15 +44,15 @@ public class Seeds {
         DBHelper.save(visitor10);
 
 //        LINEUPS___________________________________________________________________________________________________
-        LineUp lineUp1 = new LineUp(LocalDate.of(2018,8,24));
+        LineUp lineUp1 = new LineUp("local comedy", LocalDate.of(2018,8,24));
         DBHelper.save(lineUp1);
-        LineUp lineUp2 = new LineUp(LocalDate.of(2018,8,25));
+        LineUp lineUp2 = new LineUp("scottish music", LocalDate.of(2018,8,25));
         DBHelper.save(lineUp2);
-        LineUp lineUp3 = new LineUp(LocalDate.of(2018,8,26));
+        LineUp lineUp3 = new LineUp("black comedy", LocalDate.of(2018,8,26));
         DBHelper.save(lineUp3);
-        LineUp lineUp4 = new LineUp(LocalDate.of(2018,8,24));
+        LineUp lineUp4 = new LineUp("new music scotland",LocalDate.of(2018,8,24));
         DBHelper.save(lineUp4);
-        LineUp lineUp5 = new LineUp(LocalDate.of(2018,8,25));
+        LineUp lineUp5 = new LineUp("world music",LocalDate.of(2018,8,25));
         DBHelper.save(lineUp5);
 
 //      VENUES_________________________________________________________________________________________________

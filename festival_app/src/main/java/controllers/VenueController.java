@@ -1,6 +1,8 @@
 package controllers;
 
 import db.DBHelper;
+import db.DBVenue;
+import models.LineUp;
 import models.Venue;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -80,11 +82,13 @@ public class VenueController {
 
             int venueId = Integer.parseInt(request.params(":id"));
             Venue venue = DBHelper.find(venueId, Venue.class);
+            List<LineUp> lineups = DBVenue.getVenuesLineups(venue);
 
             Map<String, Object> model = new HashMap<>();
 
             model.put("template", "templates/venues/show.vtl");
             model.put("venue", venue);
+            model.put("lineups", lineups);
 
             return new ModelAndView(model, "templates/layout.vtl");
 

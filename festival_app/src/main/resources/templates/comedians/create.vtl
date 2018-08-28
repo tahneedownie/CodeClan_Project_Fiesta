@@ -28,7 +28,7 @@
             <select name="nationality" id="nationality" required="true">
                 #foreach ($nationality in $nationalities)
                 <option value="$nationality">
-                    $nationality.getCountry()
+                    $nationality.getCountry().toString()
                 </option>
                 #end
             </select>

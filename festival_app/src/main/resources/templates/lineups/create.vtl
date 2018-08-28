@@ -1,17 +1,29 @@
-<p class="pageHeader">New Line-Up</p>
-
+<h4>New Line-Up</h4>
 <form action="/lineups" method="post">
+    <div class="form_block_venues">
 
+    <div>
+        <label for="description">Description: </label>
+        <input type="text" class="inputbox" name="description" required="true" id="description"/>
+    </div>
+
+    <div>
         Date: <input type="date" name="date">
+    </div>
 
+    <div>
     <label for="venue">Venue:</label>
     <select id="venue" name="venue">
         #foreach( $venue in $venues )
         <option value="$venue.getId()">$venue.getName()</option>
         #end
     </select>
+    </div>
 
+        <div>
     <input type="submit" value="Save" class="button">
+        </div>
 
+    </div>
 
 </form>

@@ -1,13 +1,13 @@
 package controllers;
 
 import db.DBHelper;
+import db.DBVenue;
 import models.LineUp;
 import models.Venue;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -67,12 +67,13 @@ public class LineUpController {
 //            add the new LineUp object to the list
 //            render the original itinerary template, passing it the updated list
 
-//            int venueId = Integer.parseInt(request.queryParams("venue"));
-//            Venue venue = DBHelper.find(venueId, Venue.class);
+            int venueId = Integer.parseInt(request.queryParams("venue"));
+            Venue venue = DBHelper.find(venueId, Venue.class);
 
+            String description = request.queryParams("description");
             LocalDate date = LocalDate.parse(request.queryParams("date"));
 
-            LineUp lineUp = new LineUp(date);
+            LineUp lineUp = new LineUp(description, date);
             DBHelper.save(lineUp);
 
             response.redirect("/lineups");
@@ -81,7 +82,6 @@ public class LineUpController {
         });
 
 //        4. #SHOW : get '/className/:id'
-
         get("/lineups/:id", (request, response) -> {
 
             int lineUpId = Integer.parseInt(request.params(":id"));
@@ -129,11 +129,13 @@ public class LineUpController {
             int lineUpId = Integer.parseInt(request.params(":id"));
             LineUp lineUp = DBHelper.find(lineUpId, LineUp.class);
 
+            String description = request.queryParams("description");
             LocalDate date = LocalDate.parse(request.queryParams("date"));
 
             int venueId = Integer.parseInt(request.queryParams("venue"));
             Venue venue = DBHelper.find(venueId, Venue.class);
 
+            lineUp.setDescription(description);
             lineUp.setDate(date);
 //            lineUp.setVenue(venue);
 

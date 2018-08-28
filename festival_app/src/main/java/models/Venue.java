@@ -66,7 +66,7 @@ public class Venue {
         this.visitorCapacity = visitorCapacity;
     }
 
-    @OneToMany(mappedBy = "venue", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "venue", fetch = FetchType.EAGER)
     public List<LineUp> getLineUps() {
         return lineUps;
     }
@@ -75,17 +75,26 @@ public class Venue {
         this.lineUps = lineUps;
     }
 
-    public boolean isThereADateAlready(LineUp lineUp){
-        LocalDate potentialDate = lineUp.getDate();
+// ADDING A LINEUP TO A VENUE______________________________________________________________________________________
+//    (1) CHECK DATE
+// A single venue cannot have multiple line-ups on the same day (one line-up per day)
+// SO... A venue has lots of line-ups but can only have one line-up per day
+// If the line-up you are trying to add has the same date as one already happening at the venue you cannot add it
+
+    public boolean checkDateTaken(LineUp lineUp){
+        LocalDate date = lineUp.getDate();
         for(LineUp each_lineUp : lineUps){
-            if(each_lineUp.getDate().equals(potentialDate)){
+            if(each_lineUp.getDate().equals(date)){
                 return true;
             }
         }
         return false;
     }
 
-    public boolean isThisLineupAlreadyAtaVenue(LineUp lineUp){
+//    (2) CHECK VENUE
+//    A line-up has a set date and so cannot appear at two different venues
+//    ... OR the same line-up could be added to two different venues (on the same day)
+    public boolean checkVenueTaken(LineUp lineUp){
         List<Venue> allVenues = DBHelper.getAll(Venue.class);
         for(Venue each_venue: allVenues){
             for(LineUp each_lineup : each_venue.getLineUps()){
@@ -97,12 +106,9 @@ public class Venue {
         return false;
     }
 
+//    (3) YOU CAN ADD LINEUP TO VENUE if date and venue are not already taken
     public boolean addLineUpToVenue(LineUp lineUp){
-//        A venue cannot have multiple lineups on same date
-//        A venue has lots of lineups but only one lineUp per date
-//        get array list of lineup dates
-//        if the lineup you are trying to add has the same date you cannot add it
-        if(!isThereADateAlready(lineUp) || isThisLineupAlreadyAtaVenue(lineUp)){
+        if(!checkDateTaken(lineUp) || !checkVenueTaken(lineUp)){
             lineUps.add(lineUp);
             return true;
         }

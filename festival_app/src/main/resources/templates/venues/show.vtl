@@ -1,4 +1,4 @@
-<p class="pageHeader">Venue information</p>
+<p class="pageHeader">VENUE INFO</p>
 
 <table>
     <tr>
@@ -14,11 +14,25 @@
         <td>$venue.getVisitorCapacity()</td>
     <tr>
 
-    <h2><a href="/venues/$venue.getId()/edit">EDIT</a></h2>
-
-
-
-
-
 </table>
 
+<h2><a href="/venues/$venue.getId()/edit">Edit Venue</a></h2>
+<h2><a href="/lineups/new">Add a Line-Up</a></h2>
+
+<h2>Venue's Line-Ups</h2>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Description</th>
+    </tr>
+
+    #foreach ($lineUp in $lineUps)
+    <tr>
+        <td>$lineUp.getDate()</td>
+        <td>$lineUp.getDescription()</td>
+        <td><a href="/lineups/$lineup.getId()/edit">Edit</a></td>
+        <td><a href="/lineups/$lineup.getId()/delete">Delete</a></td>
+    <tr>
+        #end
+
+</table>

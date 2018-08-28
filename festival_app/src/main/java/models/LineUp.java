@@ -9,6 +9,7 @@ import java.util.List;
 public class LineUp {
 
     private int id;
+    private String description;
     private LocalDate date;
     private Venue venue;
     private List<Performance> performances;
@@ -16,10 +17,10 @@ public class LineUp {
     public LineUp() {
     }
 
-    public LineUp(LocalDate date) {
+    public LineUp(String description, LocalDate date) {
+        this.description = description;
         this.date = date;
     }
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,6 +31,15 @@ public class LineUp {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Column(name = "description")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Column(name = "date")
