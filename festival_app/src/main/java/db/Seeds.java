@@ -36,11 +36,11 @@ public class Seeds {
         DBHelper.save(visitor6);
         Visitor visitor7 = new Visitor("Ricardio", "Ruiz");
         DBHelper.save(visitor7);
-        Visitor visitor8 = new Visitor("Stoo", "Black");
+        Visitor visitor8 = new Visitor("Stuart", "Blue");
         DBHelper.save(visitor8);
         Visitor visitor9 = new Visitor("Gemma", "Prettigal");
         DBHelper.save(visitor9);
-        Visitor visitor10 = new Visitor("Bee", "Ficek");
+        Visitor visitor10 = new Visitor("BumbleBee", "Ficek");
         DBHelper.save(visitor10);
 
 //        VENUES_________________________________________________________________________________________________

@@ -22,7 +22,7 @@
 
     #foreach ($venue in $venues)
     <tr>
-        <td>$venue.getName()</td>
+        <td><a href="/venues/$venue.getId()">$venue.getName()</a></td>
         <td>$venue.getLocation()</td>
         <td>$venue.getVisitorCapacity()</td>
     <tr>
