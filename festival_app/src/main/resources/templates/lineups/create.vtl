@@ -2,8 +2,13 @@
 
 <form action="/lineups" method="post">
 
-    <label for="date">Date (dd-MM-yyyy):</label>
-    <input type="text" class="inputbox" name="date" required="true" id="date"/>
+    <h2>Date</h2>
+     <form action="/action_page.php">
+        Day (date and time):
+        <input type="datetime-local" name="date">
+        <input type="submit" value="Send">
+    </form>
+
 
     <label for="venue">Venue:</label>
     <select id="venue" name="venue">
