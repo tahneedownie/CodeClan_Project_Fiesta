@@ -52,7 +52,6 @@ public class LineUpController {
             model.put("lineUps", lineUps);
             model.put("venues", venues);
 
-
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());
@@ -67,10 +66,10 @@ public class LineUpController {
 //            add the new LineUp object to the list
 //            render the original itinerary template, passing it the updated list
 
-            LocalDate date = LocalDate.parse(request.queryParams("date"));
-
             int venueId = Integer.parseInt(request.queryParams("venue"));
             Venue venue = DBHelper.find(venueId, Venue.class);
+
+            LocalDate date = LocalDate.parse(request.queryParams("date"));
 
             LineUp lineUp = new LineUp(date, venue);
             DBHelper.save(lineUp);
@@ -92,6 +91,7 @@ public class LineUpController {
             model.put("template", "templates/lineups/show.vtl");
             model.put("lineUp", lineUp);
 
+
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());
@@ -104,12 +104,13 @@ public class LineUpController {
             LineUp lineUp = DBHelper.find(lineUpId, LineUp.class);
             List<Venue> venues = DBHelper.getAll(Venue.class);
 
+            LocalDate date = LocalDate.parse(request.queryParams("date"));
+
             Map<String, Object> model = new HashMap<>();
 
             model.put("template", "templates/lineups/edit.vtl");
             model.put("lineUp", lineUp);
             model.put("venues", venues);
-
 
             return new ModelAndView(model, "templates/layout.vtl");
 
