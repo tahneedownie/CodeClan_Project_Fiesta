@@ -66,7 +66,7 @@ public class Venue {
         this.visitorCapacity = visitorCapacity;
     }
 
-    @OneToMany(mappedBy = "venue", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "venue", fetch = FetchType.EAGER)
     public List<LineUp> getLineUps() {
         return lineUps;
     }
@@ -99,6 +99,7 @@ public class Venue {
 
     public boolean addLineUpToVenue(LineUp lineUp){
 //        A venue cannot have multiple lineups on same date
+
 //        A venue has lots of lineups but only one lineUp per date
 //        get array list of lineup dates
 //        if the lineup you are trying to add has the same date you cannot add it
@@ -107,6 +108,7 @@ public class Venue {
             return true;
         }
         return false;
+
     }
 
 }
