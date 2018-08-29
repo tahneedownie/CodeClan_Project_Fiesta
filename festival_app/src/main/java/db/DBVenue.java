@@ -5,6 +5,7 @@ import models.Venue;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
@@ -30,12 +31,12 @@ public class DBVenue {
     //    return wasItAdded;
     }
 
-    public static List<LineUp> getVenuesLineups(Venue venue) {
+    public static List<LineUp> getVenuesLineupsbyDate(Venue venue) {
         session = HibernateUtil.getSessionFactory().openSession();
         List<LineUp> results = null;
         try {
             Criteria cr = session.createCriteria(LineUp.class);
-            cr.add(Restrictions.eq("venue", venue));
+            cr.add(Restrictions.eq("venue", venue)).addOrder(Order.desc("date"));
             results =  cr.list();
         } catch (HibernateException e) {
             e.printStackTrace();

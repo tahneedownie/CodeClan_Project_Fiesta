@@ -118,5 +118,8 @@ public class LineUp {
         return false;
     }
 
+//    Get the number of artists attributed to a LineUp through its performances
+//    Get the xx
+
 
 }

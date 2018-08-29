@@ -4,6 +4,7 @@ import db.DBHelper;
 import db.DBLineUp;
 import db.DBVenue;
 import models.LineUp;
+import models.Performance;
 import models.Venue;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -87,7 +88,10 @@ public class VenueController {
             int venueId = Integer.parseInt(request.params(":id"));
             Venue venue = DBHelper.find(venueId, Venue.class);
 
-            List<LineUp> lineUps = DBVenue.getVenuesLineups(venue);
+            List<LineUp> lineUps = DBVenue.getVenuesLineupsbyDate(venue);
+            List<Performance> performances = DBHelper.getAll(Performance.class);
+
+
 
             Map<String, Object> model = new HashMap<>();
 
