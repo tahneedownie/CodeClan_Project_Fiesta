@@ -118,8 +118,28 @@ public class LineUp {
         return false;
     }
 
+//    Get the start time of a lineup from the start time of its first performance
+
+    public LocalTime getLineUpStartTime(){
+        for(Performance each_performance: this.performances){
+            for(Performance each_performance : each_lineup.getPerformances()){
+//                TODO: CHECK THE LOGIC IN LINE BELOW
+                if(each_performance.equals(performance) || each_lineup.getDate().equals(date) ){
+                    return true;
+                }
+            }
+
+
+
+    }
+
+
+//    Get the end time of a lineup from the starttime+duration of its last performance
+
 //    Get the number of artists attributed to a LineUp through its performances
-//    Get the xx
+
+
+
 
 
 }
