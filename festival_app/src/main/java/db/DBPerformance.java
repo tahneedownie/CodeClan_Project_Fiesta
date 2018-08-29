@@ -1,9 +1,6 @@
 package db;
 
-import models.LineUp;
-import models.Performance;
-import models.Venue;
-import models.Visitor;
+import models.*;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -88,6 +85,11 @@ public class DBPerformance {
             session.close();
         }
         return venues;
+    }
+
+    public static void addArtistToPerformance(Artist artist, Performance performance){
+        performance.addArtistToPerformance(artist);
+        DBHelper.update(performance); // REMEMBER THIS WILL CASCADE UPDATE TO PROJECT
     }
 
     public static boolean addVisitorToPerformance(Performance performance, Visitor visitor){

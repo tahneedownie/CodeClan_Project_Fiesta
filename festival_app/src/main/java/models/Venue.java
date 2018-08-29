@@ -118,12 +118,13 @@ public class Venue {
     }
 
 //    (3) YOU CAN ADD LINEUP TO VENUE if date and venue are not already taken
-    public boolean addLineUpToVenue(LineUp lineUp){
-        if(!checkDateTaken(lineUp) || !checkVenueTaken(lineUp)){
-            lineUps.add(lineUp);
-            return true;
-        }
-        return false;
-    }
+    public boolean addLineUpToVenue(LineUp lineUp) {
 
-}
+        if (!checkDateTaken(lineUp) || !checkVenueTaken(lineUp)) {
+                lineUps.add(lineUp);
+                return true;
+            }
+            return false;
+        }
+
+    }

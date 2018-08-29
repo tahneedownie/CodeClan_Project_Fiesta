@@ -46,12 +46,6 @@ public class DBArtist {
         return artists;
     }
 
-    public static void addArtistToPerformance(Artist artist, Performance performance){
-        artist.addPerformance(performance);
-        performance.addArtistToPerformance(artist);
-        DBHelper.update(artist); // REMEMBER THIS WILL CASCADE UPDATE TO PROJECT
-    }
-
     public static List<Performance> getArtistsPerformances(Artist artist){
         List<Performance> results = null;
         session = HibernateUtil.getSessionFactory().openSession();

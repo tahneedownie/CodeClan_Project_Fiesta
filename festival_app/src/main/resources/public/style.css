@@ -6,7 +6,7 @@ body {
 .nav_1 {
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 
@@ -14,9 +14,35 @@ nav {
   background-color: #FE6768;
 }
 
+
 .nav_over_ride {
   background-color: #837C8D;
-  margin-left: 21px;
+  margin-left: 25px;
+  margin-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.artist_cat_flex {
+  margin-left: 170px;
+  margin-right: 170px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.artist_sub_cat_individual {
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+  color: #3BB273;
+  text-decoration: none;
 }
 
 
@@ -66,16 +92,10 @@ nav {
 
 
 .nav_menu_2 {
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
     color: white;
     text-decoration: none;
-    text-align: center;
-    margin-left: 0px;
-    margin-right: 30px;
 }
 
 
@@ -84,7 +104,6 @@ footer {
     margin-top: 11px;
     padding-top: 180px;
     padding-bottom: 10px;
-    padding-left: 10px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 0px;
@@ -263,6 +282,11 @@ h5 {
   background-color: #EDE38E;
 }
 
+
+.form_block_artists {
+  display: flex;
+  align-items: center;
+}
 
 
 label {
