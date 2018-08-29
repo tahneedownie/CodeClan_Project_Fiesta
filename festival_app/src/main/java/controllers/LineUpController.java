@@ -65,8 +65,9 @@ public class LineUpController {
 
             LineUp lineUp = new LineUp(description, date);
             DBHelper.save(lineUp);
+            DBVenue.addLineUpToVenue(venue, lineUp);
 
-            response.redirect("/lineups");
+            response.redirect("/venues/"+venueId);
 
             return null;
         });

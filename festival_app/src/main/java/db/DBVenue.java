@@ -14,15 +14,20 @@ public class DBVenue {
     private static Session session;
 
     public static boolean notSavingSameVenue(Venue venue) {
-        boolean venueSaved = venue.cantAddSameVenue();
-        DBHelper.save(venue);
-        return venueSaved;
+        if (venue.canAddSameVenue()) {
+            DBHelper.save(venue);
+            return true;
+        }
+        return false;
     }
 
-    public static boolean addLineUpToVenue(Venue venue, LineUp lineUp){
-        boolean wasItAdded = venue.addLineUpToVenue(lineUp);
-        DBHelper.update(venue); // REMEMBER THIS WILL CASCADE UPDATE TO PROJECT
-        return wasItAdded;
+    public static void addLineUpToVenue(Venue venue, LineUp lineUp){
+     //   boolean wasItAdded = venue.addLineUpToVenue(lineUp);
+        venue.addLineUp(lineUp);
+   //     DBHelper.update(venue);// REMEMBER THIS WILL CASCADE UPDATE TO PROJECT
+        lineUp.setVenue(venue);
+        DBHelper.update(lineUp);
+    //    return wasItAdded;
     }
 
     public static List<LineUp> getVenuesLineups(Venue venue) {

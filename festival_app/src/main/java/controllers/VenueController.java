@@ -85,13 +85,13 @@ public class VenueController {
 
             int venueId = Integer.parseInt(request.params(":id"));
             Venue venue = DBHelper.find(venueId, Venue.class);
-            List<LineUp> lineups = DBVenue.getVenuesLineups(venue);
+            List<LineUp> lineUps = DBVenue.getVenuesLineups(venue);
 
             Map<String, Object> model = new HashMap<>();
 
             model.put("template", "templates/venues/show.vtl");
             model.put("venue", venue);
-            model.put("lineups", lineups);
+            model.put("lineUps", lineUps);
 
             return new ModelAndView(model, "templates/layout.vtl");
 

@@ -76,14 +76,14 @@ public class Venue {
     }
 
 //    CAN I ADD A VENUE (CAN'T IF ALREADY TAKEN)___________________________________________________________________
-    public boolean cantAddSameVenue(){
+    public boolean canAddSameVenue(){
         List<Venue> venues = DBHelper.getAll(Venue.class);
         for(Venue each_venue : venues){
-            if(each_venue.getName().equals(this.name)){
-                return true;
+            if(each_venue.getName().equalsIgnoreCase(this.name)){
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
 // ADDING A LINEUP TO A VENUE______________________________________________________________________________________
@@ -118,8 +118,9 @@ public class Venue {
     }
 
 //    (3) YOU CAN ADD LINEUP TO VENUE if date and venue are not already taken
-    public boolean addLineUpToVenue(LineUp lineUp) {
+//    public boolean addLineUpToVenue(LineUp lineUp) {
 
+    public boolean addLineUp(LineUp lineUp){
         if (!checkDateTaken(lineUp) || !checkVenueTaken(lineUp)) {
                 lineUps.add(lineUp);
                 return true;
