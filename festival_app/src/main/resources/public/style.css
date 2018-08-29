@@ -310,9 +310,10 @@ h5 {
 
 
 .form_block_musicians {
+  margin-top: 14px;
   padding-top: 25px;
   padding-bottom: 15px;
-  background-image: url(/images/form_background_image_merry_L2.jpg);
+  background-image: url(/images/merry.jpeg);
   background-size: 100%;
   background-position: right;
   background-repeat: no-repeat;
