@@ -72,7 +72,7 @@ public class ComedianController {
             String type = request.queryParams("type");
             String manager = request.queryParams("manager");
 
-            Locale.Category[] nationalities = Locale.Category.values();
+            Locale[] nationalities = Locale.getAvailableLocales();
             Locale nationality = Locale.getDefault(Locale.Category.valueOf(request.queryParams("nationality")));
 
             Comedian comedian = new Comedian(firstName, lastName, type, manager, nationality);
@@ -138,7 +138,7 @@ public class ComedianController {
             String type = request.queryParams("type");
             String manager = request.queryParams("manager");
 
-            Locale.Category[] nationalities = Locale.Category.values();
+            Locale[] nationalities = Locale.getAvailableLocales();
             Locale nationality = Locale.getDefault(Locale.Category.valueOf(request.queryParams("nationality")));
 
             comedian.setFirstName(firstName);

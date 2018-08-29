@@ -13,6 +13,12 @@ public class DBVenue {
 
     private static Session session;
 
+    public static boolean notSavingSameVenue(Venue venue) {
+        boolean venueSaved = venue.cantAddSameVenue();
+        DBHelper.save(venue);
+        return venueSaved;
+    }
+
     public static boolean addLineUpToVenue(Venue venue, LineUp lineUp){
         boolean wasItAdded = venue.addLineUpToVenue(lineUp);
         DBHelper.update(venue); // REMEMBER THIS WILL CASCADE UPDATE TO PROJECT

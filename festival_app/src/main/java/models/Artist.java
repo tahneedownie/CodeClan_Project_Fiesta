@@ -99,15 +99,4 @@ public abstract class Artist {
         this.performances = performances;
     }
 
-    public void addPerformance(Performance performance){
-//        you can add the performance to the artist as long as the performance is not at the same time or within duration window (performance.getTime) and on the same day (lineup.getDate)
-
-        performance.getTime().plusMinutes(performance.getDuration());
-
-
-
-
-        this.performances.add(performance);
-    }
-
 }

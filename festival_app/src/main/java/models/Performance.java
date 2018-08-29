@@ -3,7 +3,6 @@ package models;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -84,9 +83,16 @@ public class Performance {
         this.artists = artists;
     }
 
+//    TODO: ADDING ARTISTS TO PERFORMANCES__________________________________________________________________________
+//    An artist cannot be added to a performance that is occuring at the same time (performance) on the same day (lineup)
+//    The performance can be at a different time as long as it is a different day
+//    The performance can be the same day as long as the time of the performance does not overlap
+
     public void addArtistToPerformance(Artist artist){
         this.artists.add(artist);
     }
+
+
 
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @ManyToMany
@@ -100,5 +106,14 @@ public class Performance {
     public void setVisitors(List<Visitor> visitors) {
         this.visitors = visitors;
     }
+
+    public boolean addVisitor(Visitor visitor){
+        if (lineUp.getVenue().getVisitorCapacity() < this.visitors.size()){
+            this.visitors.add(visitor);
+            return true;
+        } return false;
+    }
+
+
 
 }

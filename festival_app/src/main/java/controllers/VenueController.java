@@ -69,7 +69,10 @@ public class VenueController {
             int visitorCapacity = Integer.parseInt(request.queryParams("visitorCapacity"));
 
             Venue venue = new Venue(name, location, visitorCapacity);
-            DBHelper.save(venue);
+            List<Venue> venues = DBHelper.getAll(Venue.class);
+
+//            TODO: WHY IS THIS NOT WORKING
+            DBVenue.notSavingSameVenue(venue);
 
             response.redirect("/venues");
 
@@ -130,7 +133,7 @@ public class VenueController {
             venue.setLocation(location);
             venue.setVisitorCapacity(visitorCapacity);
 
-            DBHelper.save(venue);
+            DBHelper.update(venue);
 
             response.redirect("/venues");
 

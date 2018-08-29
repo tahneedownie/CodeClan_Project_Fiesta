@@ -75,6 +75,17 @@ public class Venue {
         this.lineUps = lineUps;
     }
 
+//    CAN I ADD A VENUE (CAN'T IF ALREADY TAKEN)___________________________________________________________________
+    public boolean cantAddSameVenue(){
+        List<Venue> venues = DBHelper.getAll(Venue.class);
+        for(Venue each_venue : venues){
+            if(each_venue.getName().equals(this.name)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 // ADDING A LINEUP TO A VENUE______________________________________________________________________________________
 //    (1) CHECK DATE
 // A single venue cannot have multiple line-ups on the same day (one line-up per day)

@@ -16,3 +16,27 @@
 
 </table>
 
+</table>
+
+<h2><a href="/lineups/$lineup.getId()/edit">Edit Line-Up</a></h2>
+<h2><a href="/performances/new">Add a Performance</a></h2>
+
+<h2>Line-Up's Performances</h2>
+<table>
+    <tr>
+        <th>Start time</th>
+        <th>Duration</th>
+    </tr>
+
+    #foreach ($performance in $performances)
+    <tr>
+        <td>$performance.getTime()</td>
+        <td>$performance.getDuration()</td>
+        <td><a href="/performances/$performance.getId()">Artist information</a></td>
+    <tr>
+        #end
+
+</table>
+
+
+

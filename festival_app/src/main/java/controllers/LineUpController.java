@@ -1,8 +1,10 @@
 package controllers;
 
 import db.DBHelper;
+import db.DBLineUp;
 import db.DBVenue;
 import models.LineUp;
+import models.Performance;
 import models.Venue;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -25,19 +27,7 @@ public class LineUpController {
 
 //        RESTFUL ROUTES
 
-//        1. #INDEX : get '/className'
-
-        get("/lineups", (request, response) -> {
-
-            Map<String, Object> model = new HashMap<>();
-
-            List<LineUp> lineUps = DBHelper.getAll(LineUp.class);
-
-            model.put("template", "templates/lineups/index.vtl");
-            model.put("lineUps", lineUps);
-
-            return new ModelAndView(model, "templates/layout.vtl");
-        }, new VelocityTemplateEngine());
+//        1. #INDEX : NOT USEFUL TO SHOW A LIST OF ALL LINEUPS
 
 
 //        2. #NEW : get '/className/new'
@@ -86,12 +76,13 @@ public class LineUpController {
 
             int lineUpId = Integer.parseInt(request.params(":id"));
             LineUp lineUp = DBHelper.find(lineUpId, LineUp.class);
+            List<Performance> performances = DBLineUp.getLineUpsPerformanceList(lineUp);
 
             Map<String, Object> model = new HashMap<>();
 
             model.put("template", "templates/lineups/show.vtl");
             model.put("lineUp", lineUp);
-
+            model.put("performances", performances);
 
             return new ModelAndView(model, "templates/layout.vtl");
 

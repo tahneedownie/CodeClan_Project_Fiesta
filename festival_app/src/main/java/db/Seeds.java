@@ -83,7 +83,7 @@ public class Seeds {
         Musician chvrches3 = new Musician("Martin", "Doherty", "Keyboards", "Chvrches manager", MusicGenreType.POP);
         DBHelper.save(chvrches3);
 
-        Comedian comedian1 = new Comedian("Reginald", "D Hunter", "Standup", "Reg Manager", Locale.US);
+        Comedian comedian1 = new Comedian("Reginald", "D Hunter", "Standup", "Reg Manager", Locale.UK      );
         DBHelper.save(comedian1);
         Comedian comedian2 = new Comedian("Frankie", "Boyle", "Standup", "Frankie", Locale.UK);
         DBHelper.save(comedian2);
