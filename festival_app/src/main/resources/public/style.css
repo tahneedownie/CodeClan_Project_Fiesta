@@ -17,8 +17,12 @@ nav {
 
 .nav_over_ride {
   background-color: #837C8D;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 46px;
+  padding-right: 46px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,8 +30,8 @@ nav {
 
 
 .artist_cat_flex {
-  margin-left: 170px;
-  margin-right: 170px;
+  margin-left: 230px;
+  margin-right: 230px;
   margin-top: 25px;
   margin-bottom: 50px;
   display: flex;
@@ -40,7 +44,7 @@ nav {
   margin-left: 25px;
   margin-right: 25px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14pt;
+  font-size: 15pt;
   color: #3BB273;
   text-decoration: none;
 }
@@ -56,12 +60,29 @@ nav {
 }
 
 
+.nav_menu_2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    color: white;
+    text-decoration: none;
+}
+
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 0px;
+    color: white;
+    text-decoration: none;
+}
+
+
 .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 46px;
+    padding-right: 0px;
     width: 85%;
     max-width: 130px;
     max-height: 130px;
@@ -91,32 +112,11 @@ nav {
 }
 
 
-.nav_menu_2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12pt;
-    color: white;
-    text-decoration: none;
-}
-
-
-footer {
-    background-color: #837C8D;
-    margin-top: 11px;
-    padding-top: 180px;
-    padding-bottom: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 0px;
-    color: white;
-    text-decoration: none;
-}
-
-
 .getting_started_image {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 11px;
+    margin-top: 0px;
     width: 100%;
 }
 
@@ -271,7 +271,7 @@ h5 {
   padding-bottom: 15px;
   background-image: url(/images/form_background_image_merry_L2.jpg);
   background-size: 100%;
-  background-position: bottom;
+  background-position: right;
   background-repeat: no-repeat;
 }
 
