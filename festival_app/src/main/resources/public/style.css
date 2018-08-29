@@ -21,6 +21,7 @@
 
 table {
   border-collapse: collapse;
+  margin-top: 50px;
 
 }
 
@@ -43,6 +44,11 @@ th {
 
 body {
   background-color: #FBFBFB;
+}
+
+
+a:hover {
+    text-decoration: underline;
 }
 
 
@@ -73,8 +79,8 @@ nav {
 
 
 .artist_cat_flex {
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-bottom: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +90,7 @@ nav {
 .artist_sub_cat_individual {
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 15pt;
+  font-size: 17pt;
   color: #3BB273;
   text-decoration: none;
 }
@@ -118,13 +124,10 @@ footer {
 
 
 .logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 46px;
     padding-right: 0px;
-    width: 85%;
-    max-width: 130px;
+    width: 100%;
+    max-width: 160px;
     max-height: 130px;
     margin-top: 0px;
 }
