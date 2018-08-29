@@ -25,6 +25,27 @@ nav {
 }
 
 
+.artist_cat_flex {
+  margin-left: 170px;
+  margin-right: 170px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.artist_sub_cat_individual {
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+  color: #3BB273;
+  text-decoration: none;
+}
+
+
 .nav_menu_1 {
   list-style-type: none;
   display: inline-block;
@@ -71,9 +92,6 @@ nav {
 
 
 .nav_menu_2 {
-
-
-
     font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
     color: white;
@@ -262,6 +280,12 @@ h5 {
   padding-top: 25px;
   padding-bottom: 15px;
   background-color: #EDE38E;
+}
+
+
+.form_block_artists {
+  display: flex;
+  align-items: center;
 }
 
 
