@@ -1,6 +1,7 @@
 package controllers;
 
 import db.DBHelper;
+import db.DBLineUp;
 import db.DBVenue;
 import models.LineUp;
 import models.Venue;
@@ -85,6 +86,7 @@ public class VenueController {
 
             int venueId = Integer.parseInt(request.params(":id"));
             Venue venue = DBHelper.find(venueId, Venue.class);
+
             List<LineUp> lineUps = DBVenue.getVenuesLineups(venue);
 
             Map<String, Object> model = new HashMap<>();

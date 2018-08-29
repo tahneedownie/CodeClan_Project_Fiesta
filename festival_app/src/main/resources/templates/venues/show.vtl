@@ -1,5 +1,3 @@
-<p class="pageHeader">VENUE INFO</p>
-
 <table>
     <tr>
         <th>Name</th>
@@ -26,14 +24,19 @@
     <tr>
         <th>Date</th>
         <th>Description</th>
+        <th>No. performing Artists</th>
+        <th>First performance (start time)</th>
+        <th>Last performance (end time)</th>
+
     </tr>
 
     #foreach ($lineUp in $lineUps)
     <tr>
         <td>$lineUp.getDate()</td>
-        <td>$lineUp.getDescription()</td>
-        <td><a href="/lineups/$lineup.getId()/edit">Edit</a></td>
-        <td><a href="/lineups/$lineup.getId()/delete">Delete</a></td>
+        <td><a href="/lineups/$lineup.getId()">$lineUp.getDescription()</a></td>
+        <td>$lineUp.getDate()</td>
+        <td>$lineUp.getDate()</td>
+        <td>$lineUp.getDate()</td>
     <tr>
         #end
 
