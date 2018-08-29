@@ -1,3 +1,25 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px blue solid;
+
+}
+
+
 body {
   background-color: #FBFBFB;
 }
@@ -30,23 +52,22 @@ nav {
 
 
 .artist_cat_flex {
-  margin-left: 230px;
-  margin-right: 230px;
   margin-top: 25px;
   margin-bottom: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  border: 1px black solid;
 }
 
 
 .artist_sub_cat_individual {
-  margin-left: 25px;
-  margin-right: 25px;
-  font-family: 'Open Sans', sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 15pt;
   color: #3BB273;
   text-decoration: none;
+  border: 1px red solid;
 }
 
 
