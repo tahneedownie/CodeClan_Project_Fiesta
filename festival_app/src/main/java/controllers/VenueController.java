@@ -3,6 +3,7 @@ package controllers;
 import db.DBHelper;
 import db.DBLineUp;
 import db.DBVenue;
+import models.Artist;
 import models.LineUp;
 import models.Performance;
 import models.Venue;
@@ -73,7 +74,6 @@ public class VenueController {
             Venue venue = new Venue(name, location, visitorCapacity);
             List<Venue> venues = DBHelper.getAll(Venue.class);
 
-//            TODO: WHY IS THIS NOT WORKING
             DBVenue.notSavingSameVenue(venue);
 
             response.redirect("/venues");
@@ -89,9 +89,6 @@ public class VenueController {
             Venue venue = DBHelper.find(venueId, Venue.class);
 
             List<LineUp> lineUps = DBVenue.getVenuesLineupsbyDate(venue);
-            List<Performance> performances = DBHelper.getAll(Performance.class);
-
-
 
             Map<String, Object> model = new HashMap<>();
 

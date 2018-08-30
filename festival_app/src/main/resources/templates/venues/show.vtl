@@ -14,12 +14,18 @@
 
 </table>
 
-<h2><a href="/venues/$venue.getId()/edit">Edit Venue</a></h2>
-<h2><a href="/venues/$venue.getId()/delete">Delete Venue</a></h2>
+<div>
+    <h2><a class="save_button_artist" type="submit" href="/venues/$venue.getId()/edit">Edit</a></h2>
+</div>
+<div>
+    <h2><a class="save_button_artist" type="submit" href="/venues/$venue.getId()/delete">Delete</a></h2>
+</div>
 
-<h2><a href="/lineups/new">Add a Line-Up</a></h2>
+<h2>Line-Up, line-up!!</h2>
+<div>
+    <h2><a class="save_button_artist" type="submit" href="/lineups/new">New Line Up</a></h2>
+</div>
 
-<h2>Venue's Line-Ups</h2>
 <table>
     <tr>
         <th>Date</th>
@@ -34,9 +40,9 @@
     <tr>
         <td>$lineUp.getDate()</td>
         <td><a href="/lineups/$lineup.getId()">$lineUp.getDescription()</a></td>
-        <td>$lineUp.getDate()</td>
-        <td>$lineUp.getDate()</td>
-        <td>$lineUp.getDate()</td>
+        <td>$lineUp.numberOfArtistsInLineUp()</td>
+        <td>$lineUp.firstPerformanceStartTime()</td>
+        <td>$lineUp.lastPerformanceEndTime()</td>
     <tr>
         #end
 

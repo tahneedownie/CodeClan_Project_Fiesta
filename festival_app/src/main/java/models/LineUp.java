@@ -5,6 +5,9 @@ import db.DBHelper;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -120,23 +123,44 @@ public class LineUp {
 
 //    Get the start time of a lineup from the start time of its first performance
 
-    public LocalTime getLineUpStartTime(){
-        for(Performance each_performance: this.performances){
-            for(Performance each_performance : each_lineup.getPerformances()){
-//                TODO: CHECK THE LOGIC IN LINE BELOW
-                if(each_performance.equals(performance) || each_lineup.getDate().equals(date) ){
-                    return true;
-                }
-            }
+    public LocalTime firstPerformanceStartTime(){
+        List<LocalTime> startTimes = new ArrayList<>();
 
+        for(Performance each_performance : this.performances) {
+            startTimes.add(each_performance.getTime());
+        }
 
+        LocalTime earliestTime = Collections.min(startTimes);
+        return earliestTime;
 
     }
 
-
 //    Get the end time of a lineup from the starttime+duration of its last performance
 
+    public LocalTime lastPerformanceEndTime(){
+        List<LocalTime> endTimes = new ArrayList<>();
+
+        for(Performance each_performance : this.performances){
+            endTimes.add(each_performance.getTime().plusMinutes(each_performance.getDuration()));
+        }
+
+        LocalTime latestTime = Collections.max(endTimes);
+        return latestTime;
+
+    }
+
 //    Get the number of artists attributed to a LineUp through its performances
+
+    public int numberOfArtistsInLineUp(){
+        List<Artist> artistsInLineUp = new ArrayList<>();
+
+        for(Performance each_performance : this.performances){
+            for(Artist each_artist : each_performance.getArtists()){
+                artistsInLineUp.add(each_artist);
+            }
+        }
+        return artistsInLineUp.size();
+    }
 
 
 
