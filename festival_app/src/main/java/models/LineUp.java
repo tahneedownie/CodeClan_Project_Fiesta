@@ -5,6 +5,8 @@ import db.DBHelper;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -80,12 +82,11 @@ public class LineUp {
 // SO... A lineup has lots of performance but can only have one per time slot
 // If the performance you are trying to add has the same time as one already happening in the line up you cannot add it
 
-    public boolean checkTimeSlotTaken(Performance performance){
+    public boolean checkTimeSlotTaken(Performance performance) {
         LocalTime startTime = performance.getTime();
         LocalTime endTime = performance.getTime().plusMinutes(performance.getDuration());
-        for(Performance each_performance : performances){
-            if(each_performance.getTime().equals(startTime) || each_performance.getTime().isBefore(endTime))
-            {
+        for (Performance each_performance : performances) {
+            if (each_performance.getTime().equals(startTime) || each_performance.getTime().isBefore(endTime)) {
                 return true;
             }
         }
@@ -96,12 +97,12 @@ public class LineUp {
 //    A Performance has a set time and so cannot be added to two different lineups on the same day at the same time
 //    ... OR the same performance could be added to two different lineups (on the same day)
 //    So check all line ups for their performances to make sure that the performance hasn't already been added to another line up on the same day
-    public boolean checkLineUpTaken(Performance performance){
+    public boolean checkLineUpTaken(Performance performance) {
         List<LineUp> allLineUps = DBHelper.getAll(LineUp.class);
-        for(LineUp each_lineup: allLineUps){
-            for(Performance each_performance : each_lineup.getPerformances()){
+        for (LineUp each_lineup : allLineUps) {
+            for (Performance each_performance : each_lineup.getPerformances()) {
 //                TODO: CHECK THE LOGIC IN LINE BELOW
-                if(each_performance.equals(performance) || each_lineup.getDate().equals(date) ){
+                if (each_performance.equals(performance) || each_lineup.getDate().equals(date)) {
                     return true;
                 }
             }
@@ -110,8 +111,8 @@ public class LineUp {
     }
 
     //    (3) YOU CAN ADD PERFORMANCE TO LINEUP if time and lineup(date) are not already taken
-    public boolean addPerformance(Performance performance){
-        if(!checkTimeSlotTaken(performance) || !checkLineUpTaken(performance)){
+    public boolean addPerformance(Performance performance) {
+        if (!checkTimeSlotTaken(performance) || !checkLineUpTaken(performance)) {
             this.performances.add(performance);
             return true;
         }
@@ -120,26 +121,41 @@ public class LineUp {
 
 //    Get the start time of a lineup from the start time of its first performance
 
-    public LocalTime getLineUpStartTime(){
-        for(Performance each_performance: this.performances){
-            for(Performance each_performance : each_lineup.getPerformances()){
-//                TODO: CHECK THE LOGIC IN LINE BELOW
-                if(each_performance.equals(performance) || each_lineup.getDate().equals(date) ){
-                    return true;
-                }
-            }
-
-
-
+    public LocalTime firstPerformanceStartTime() {
+        List<LocalTime> startTimes = new ArrayList<>();
+        for (Performance each_performance : this.performances) {
+            startTimes.add(each_performance.getTime());
+        }
+        LocalTime earliestTime = Collections.min(startTimes);
+        return earliestTime;
     }
 
 
 //    Get the end time of a lineup from the starttime+duration of its last performance
 
+    public LocalTime lastPerformanceEndTime() {
+        List<LocalTime> endTimes = new ArrayList<>();
+        for (Performance each_performance : this.performances) {
+            endTimes.add(each_performance.getTime().plusMinutes(each_performance.getDuration()));
+        }
+        LocalTime latestTime = Collections.max(endTimes);
+        return latestTime;
+    }
+
 //    Get the number of artists attributed to a LineUp through its performances
 
-
-
-
+    public int numberOfArtistsInLineUp() {
+        List<Artist> artistsInLineUp = new ArrayList<>();
+        for (Performance each_performance : this.performances) {
+            for (Artist each_artist : each_performance.getArtists()) {
+                artistsInLineUp.add(each_artist);
+            }
+        }
+        return artistsInLineUp.size();
+    }
 
 }
+
+
+
+
