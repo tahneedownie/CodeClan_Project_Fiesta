@@ -390,15 +390,19 @@ form {
 
 
 .form_block_musicians {
-  margin-top: 14px;
   padding-top: 25px;
   padding-bottom: 15px;
-  background-image: url(/images/merry.jpeg);
-  background-size: 100%;
-  background-position: right;
-  background-repeat: no-repeat;
+  background-color: #EDE38E;
+  width: 450px;
 }
 
+
+.form_block_comedians {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  background-color: #EDE38E;
+  width: 450px;
+}
 
 
 .form_block_artists {
@@ -461,7 +465,7 @@ input, select {
   text-align: center;
   text-decoration: none;
   color: white;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
 }
 
 
