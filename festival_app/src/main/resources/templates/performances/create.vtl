@@ -1,20 +1,64 @@
-<p class="pageHeader">New Performance</p>
+<html>
+
+<head>
+    <title>new_performance</title>
+</head>
+
+<body>
+<img class= "icon" src="/images/fest_app_venue_icon_vivid_tangelo.png" alt="performance icon">
+<h4>New Performance</h4>
+
+
+<div class="form">
+
 
 <form action="/performances" method="post">
+    <div class="form_block_performances">
 
+        <div>
     <label for="time">Time (hh:mm):</label>
     <input type="text" class="inputbox" name="time" required="true" id="time"/>
+        </div>
 
+      <div>
     <label for="duration">Duration:</label>
     <input type="text" class="inputbox" name="duration" required="true" id="duration"/>
+      </div>
 
+<div>
     <label for="lineUp">LineUp (Date):</label>
     <select id="lineUp" name="lineUp">
         #foreach( $lineUp in $lineUps )
         <option value="$lineUp.getId()">$lineUp.getDate()</option>
         #end
     </select>
+</div>
 
-    <input type="submit" value="Save" class="button">
+        <div>
+    <input class="save_button_venue" type="submit" value="Save"/>
+        </div>
 
+    </div>
 </form>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

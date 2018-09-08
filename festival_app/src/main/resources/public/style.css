@@ -411,6 +411,14 @@ form {
 }
 
 
+.form_block_performances {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  background-color: #EDE38E;
+  width: 450px;
+}
+
+
 label {
   font-family: 'Open Sans', sans-serif;
   font-size: 16pt;
