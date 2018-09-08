@@ -20,17 +20,17 @@
 
 <table>
     <tr>
-        <th>Name</th>
-        <th>Location</th>
-        <th>Capacity</th>
+        <th class="orange-border">Name</th>
+        <th class="orange-border">Location</th>
+        <th class="orange-border">Capacity</th>
     </tr>
 
 
     #foreach ($venue in $venues)
     <tr>
-        <td><a href="/venues/$venue.getId()">$venue.getName()</a></td>
-        <td>$venue.getLocation()</td>
-        <td>$venue.getVisitorCapacity()</td>
+        <td class="orange-border"><a href="/venues/$venue.getId()">$venue.getName()</a></td>
+        <td class="orange-border">$venue.getLocation()</td>
+        <td class="orange-border">$venue.getVisitorCapacity()</td>
     <tr>
         #end
 

@@ -18,15 +18,15 @@
 
 <table>
     <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th class="blue-border">First Name</th>
+        <th class="blue-border">Last Name</th>
     </tr>
 
 
     #foreach ($visitor in $visitors)
     <tr>
-        <td>$visitor.getFirstName()</td>
-        <td>$visitor.getLastName()</td>
+        <td class="blue-border">$visitor.getFirstName()</td>
+        <td class="blue-border">$visitor.getLastName()</td>
     <tr>
         #end
 

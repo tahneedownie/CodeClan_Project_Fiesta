@@ -26,19 +26,49 @@ table {
 }
 
 
-
-td,
 th {
-  padding-left: 20px;
-  padding-right: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
   text-align: left;
-  border: 1px  #3BB273 solid;
-
 }
 
 
-th {
-    padding-bottom: 10px;
+th.green-border {
+  border: 1px  #3BB273 solid;
+}
+
+
+th.blue-border {
+  border: 1px  #17BEBB solid;
+}
+
+
+th.orange-border {
+  border: 1px  #E77429 solid;
+}
+
+
+td {
+  padding-left: 18px;
+  padding-right: 18px;
+  text-align: left;
+}
+
+
+td.green-border {
+  border: 1px  #3BB273 solid;
+}
+
+
+td.blue-border {
+  border: 1px  #17BEBB solid;
+}
+
+
+td.orange-border {
+  border: 1px  #E77429 solid;
 }
 
 

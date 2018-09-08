@@ -26,19 +26,19 @@
 
 <table>
     <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Type</th>
-        <th>Manager</th>
+        <th class="green-border">First Name</th>
+        <th class="green-border">Last Name</th>
+        <th class="green-border">Type</th>
+        <th class="green-border">Manager</th>
     </tr>
 
 
     #foreach ($artist in $artists)
     <tr>
-        <td>$artist.getFirstName()</td>
-        <td>$artist.getLastName()</td>
-        <td>$artist.getType()</td>
-        <td>$artist.getManager()</td>
+        <td class="green-border">$artist.getFirstName()</td>
+        <td class="green-border">$artist.getLastName()</td>
+        <td class="green-border">$artist.getType()</td>
+        <td class="green-border">$artist.getManager()</td>
     <tr>
         #end
 

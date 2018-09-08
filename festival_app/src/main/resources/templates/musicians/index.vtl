@@ -19,19 +19,19 @@
 
 <table>
     <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Manager</th>
-        <th>Genre</th>
+        <th class="green-border">First Name</th>
+        <th class="green-border">Last Name</th>
+        <th class="green-border">Manager</th>
+        <th class="green-border">Genre</th>
 
     </tr>
 
     #foreach ($musician in $musicians)
     <tr>
-        <td><a href="/musicians/$musician.getId()">$musician.getFirstName()</a></td>
-        <td>$musician.getLastName()</td>
-        <td>$musician.getManager()</td>
-        <td>$musician.getGenre().getGenreName()</td>
+        <td class="green-border"><a href="/musicians/$musician.getId()">$musician.getFirstName()</a></td>
+        <td class="green-border">$musician.getLastName()</td>
+        <td class="green-border">$musician.getManager()</td>
+        <td class="green-border">$musician.getGenre().getGenreName()</td>
     <tr>
         #end
 
