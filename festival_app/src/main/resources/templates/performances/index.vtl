@@ -1,23 +1,83 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Performances</title>
+</head>
+<body>
+
+<div class="container">
+
+    <img class= "icon" src="/images/fest_app_venue_icon_vivid_tangelo.png" alt="performance icon">
+    <h4>Performances</h4>
+
+
+<div class="table">
+
+
+    <table>
+        <tr>
+            <th class="orange-border">Time</th>
+            <th class="orange-border">Duration(mins)</th>
+            <th class="orange-border">Line-Up (date)</th>
+            <th class="orange-border">Venue</th>
+        </tr>
+
+
+        #foreach ($performance in $performances)
+        <tr>
+            <td class="orange-border">$performance.getTime()</td>
+            <td class="orange-border">$performance.getDuration()</td>
+            <td class="orange-border">$performance.getLineUp().getDate()</td>
+            <td class="orange-border">$performance.getLineUp().getVenue().getName()</td>
+        <tr>
+            #end
+
+    </table>
+
+</div>
+
+
+    <a class="add_performance_button" href="/performances/new"> Add Performance </a>
+
+
+
+
+</div>
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="pageHeader">List of Performances</p>
 
-<table>
-    <tr>
-        <th>Time</th>
-        <th>Duration(mins)</th>
-        <th>Line-Up (date)</th>
-        <th>Venue</th>
-    </tr>
 
-
-    #foreach ($performance in $performances)
-    <tr>
-        <td>$performance.getTime()</td>
-        <td>$performance.getDuration()</td>
-        <td>$performance.getLineUp().getDate()</td>
-        <td>$performance.getLineUp().getVenue().getName()</td>
-    <tr>
-        #end
-
-</table>
 
 
