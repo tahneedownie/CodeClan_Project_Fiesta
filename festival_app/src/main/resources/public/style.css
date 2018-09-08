@@ -15,22 +15,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 
 table {
   border-collapse: collapse;
-  margin-top: 50px;
-
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 
 th {
   font-weight: bold;
-  padding-bottom: 10px;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 17px;
+  padding-right: 17px;
   text-align: left;
 }
 
@@ -51,8 +51,10 @@ th.orange-border {
 
 
 td {
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   text-align: left;
 }
 
@@ -109,7 +111,7 @@ nav {
 
 
 .artist_cat_flex {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 0px;
   display: flex;
   justify-content: center;
@@ -121,6 +123,7 @@ nav {
   padding-left: 20px;
   padding-right: 20px;
   font-size: 17pt;
+  font-weight: 400;
   color: #3BB273;
   text-decoration: none;
 }
@@ -272,13 +275,13 @@ h5 {
     color: white;
     background-color: #E77429;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     padding-left 10px;
     padding-right 10px;
     width: 140px;
     text-decoration: none;
     text-align: center;
-    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 
@@ -294,13 +297,12 @@ h5 {
     color: white;
     background-color: #3BB273;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     padding-left 10px;
     padding-right 10px;
     width: 165px;
     text-decoration: none;
     text-align: center;
-    margin-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -317,13 +319,12 @@ h5 {
     color: white;
     background-color: #3BB273;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     padding-left 10px;
     padding-right 10px;
     width: 175px;
     text-decoration: none;
     text-align: center;
-    margin-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -340,13 +341,12 @@ h5 {
     color: white;
     background-color: #17BEBB;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     padding-left 10px;
     padding-right 10px;
     width: 140px;
     text-decoration: none;
     text-align: center;
-    margin-top: 100px;
     margin-bottom: 20px;
 }
 
