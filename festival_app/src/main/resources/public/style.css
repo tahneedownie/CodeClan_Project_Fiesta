@@ -17,7 +17,7 @@ body {
 }
 
 
-.nav_menu_1_items {
+.nav_1_items {
   list-style-type: none;
   display: inline-block;
   align-items: center;
@@ -48,7 +48,7 @@ body {
 }
 
 
-.nav_menu_2 {
+.nav_2 {
   background-color: #837C8D;
   margin-left: 0px;
   margin-right: 0px;
@@ -62,7 +62,7 @@ body {
 }
 
 
-.nav_menu_2_items {
+.nav_2_items {
   font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
   color: white;
