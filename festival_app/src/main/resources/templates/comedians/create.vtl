@@ -30,7 +30,7 @@
         </div>
         <div>
             <label for="nationality">Nationality:</label>
-            <select name="nationality" id="nationality" required="true">
+            <select class="select_field" name="nationality" id="nationality" required="true">
                 #foreach ($nationality in $nationalities)
                 <option value="$nationality">
                     $nationality.getCountry()

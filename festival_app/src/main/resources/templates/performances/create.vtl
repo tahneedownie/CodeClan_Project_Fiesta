@@ -27,7 +27,7 @@
 
 <div>
     <label for="lineUp">LineUp (Date):</label>
-    <select id="lineUp" name="lineUp">
+    <select class="select_field" id="lineUp" name="lineUp">
         #foreach( $lineUp in $lineUps )
         <option value="$lineUp.getId()">$lineUp.getDate()</option>
         #end

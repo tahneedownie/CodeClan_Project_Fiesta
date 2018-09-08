@@ -30,7 +30,7 @@
         </div>
         <div>
             <label for="genre">Genre:</label>
-            <select class="select_button" name="genre" id="genre" required="true">
+            <select class="select_field" name="genre" id="genre" required="true">
                 #foreach ($genre in $genres)
                 <option value="$genre">
                     $genre.getGenreName()
