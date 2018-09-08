@@ -230,8 +230,11 @@ h5 {
 }
 
 
-.add_venue {
-    display: block;
+.add_venue_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Open Sans', sans-serif;
@@ -249,28 +252,11 @@ h5 {
 }
 
 
-.add_artist {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    color: white;
-    background-color: #3BB273;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left 10px;
-    padding-right 10px;
-    width: 140px;
-    text-decoration: none;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 20px;
-}
-
-
-.add_musician {
-    display: block;
+.add_musician_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Open Sans', sans-serif;
@@ -289,8 +275,34 @@ h5 {
 }
 
 
-.add_visitor {
-    display: block;
+.add_comedian_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    color: white;
+    background-color: #3BB273;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left 10px;
+    padding-right 10px;
+    width: 175px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+
+.add_visitor_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Open Sans', sans-serif;

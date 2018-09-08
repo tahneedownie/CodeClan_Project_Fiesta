@@ -18,7 +18,7 @@ public class Musician extends Artist {
         this.genre = genre;
     }
 
-//    TODO: delete this comment
+
 
     @Column(name = "genre")
     public MusicGenreType getGenre() {
