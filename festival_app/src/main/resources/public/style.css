@@ -112,7 +112,7 @@ nav {
 
 .artist_cat_flex {
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -373,6 +373,22 @@ h5 {
 }
 
 
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+
+.form_block_venues {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  background-color: #EDE38E;
+  width: 450px;
+}
+
+
 .form_block_musicians {
   margin-top: 14px;
   padding-top: 25px;
@@ -383,12 +399,6 @@ h5 {
   background-repeat: no-repeat;
 }
 
-
-.form_block_venues {
-  padding-top: 25px;
-  padding-bottom: 15px;
-  background-color: #EDE38E;
-}
 
 
 .form_block_artists {

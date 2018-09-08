@@ -3,29 +3,40 @@
     <title>add_venue</title>
 </head>
 <body>
+
+<div class="container">
+
 <img class= "icon" src="/images/fest_app_venue_icon_vivid_tangelo.png" alt="artist icon">
 <h4>New Venue</h4>
+
+
+
+    <div class="form">
+
 <form action="/venues" method="post">
     <div class="form_block_venues">
         <div>
             <label for="name">Venue Name: </label>
             <input type="text" class="inputbox" name="name" required="true" id="name"/>
         </div>
+
         <div>
             <label for="location">Location: </label>
             <input type="text" class="inputbox" name="location" required="true" id="location"/>
         </div>
+
         <div>
             <label for="visitorCapacity">Capacity: </label>
             <input type="text" class="inputbox" name="visitorCapacity" required="true" id="visitorCapacity"/>
         </div>
-
 
         <div>
             <input class="save_button_venue" type="submit" value="Save"/>
         </div>
     </div>
 </form>
+
+    </div>
 
 
 
