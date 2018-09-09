@@ -1,6 +1,6 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -14,22 +14,18 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #FE6768;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 
 .nav_1_items {
   list-style-type: none;
-  display: inline-block;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 22px;
-  margin-left: 0pt;
 }
 
 
 .logo {
   padding-left: 46px;
-  padding-right: 0px;
   width: 100%;
   max-width: 160px;
   max-height: 130px;
@@ -44,21 +40,18 @@ body {
   width: 26%;
   max-width: 130px;
   max-height: 130px;
-  margin-top: 0px;
 }
 
 
 .nav_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #837C8D;
-  margin-left: 0px;
-  margin-right: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 46px;
   padding-right: 46px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 
@@ -71,22 +64,22 @@ body {
 
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 
 .home_page_image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  width: 100%;
 }
 
 
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -153,67 +146,58 @@ td.orange-border {
 }
 
 
-footer {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 0px;
-    color: white;
-    text-decoration: none;
-}
-
-
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 0px;
-    color: #FE6768;
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 0px;
+  color: #FE6768;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 
 h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 0px;
-    color: #3BB273;
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 0px;
+  color: #3BB273;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 
 h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 0px;
-    color: #17BEBB;
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 0px;
+  color: #17BEBB;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 
 h4 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 0px;
-    color: #E77429;
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 0px;
+  color: #E77429;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 
 h5 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 0px;
-    color: #17BEBB;
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 0px;
+  color: #17BEBB;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 
@@ -237,125 +221,125 @@ h5 {
 
 
 .icon {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    max-width: 130px;
-    max-height: 130px;
-    min-width: 70px;
-    min-height: 70px;
-    margin-top: 22px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  max-width: 130px;
+  max-height: 130px;
+  min-width: 70px;
+  min-height: 70px;
+  margin-top: 22px;
 }
 
 
 .add_venue_button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    color: white;
-    background-color: #E77429;
-    padding-top: 10px;
-    padding-bottom: 12px;
-    padding-left 10px;
-    padding-right 10px;
-    width: 140px;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  color: white;
+  background-color: #E77429;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left 10px;
+  padding-right 10px;
+  width: 140px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 
 .add_performance_button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    color: white;
-    background-color: #E77429;
-    padding-top: 10px;
-    padding-bottom: 12px;
-    padding-left 10px;
-    padding-right 10px;
-    width: 210px;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  color: white;
+  background-color: #E77429;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left 10px;
+  padding-right 10px;
+  width: 210px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 
 .add_musician_button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    color: white;
-    background-color: #3BB273;
-    padding-top: 10px;
-    padding-bottom: 12px;
-    padding-left 10px;
-    padding-right 10px;
-    width: 165px;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  color: white;
+  background-color: #3BB273;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left 10px;
+  padding-right 10px;
+  width: 165px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 
 .add_comedian_button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    color: white;
-    background-color: #3BB273;
-    padding-top: 10px;
-    padding-bottom: 12px;
-    padding-left 10px;
-    padding-right 10px;
-    width: 175px;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  color: white;
+  background-color: #3BB273;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left 10px;
+  padding-right 10px;
+  width: 175px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 
 .add_visitor_button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    color: white;
-    background-color: #17BEBB;
-    padding-top: 10px;
-    padding-bottom: 12px;
-    padding-left 10px;
-    padding-right 10px;
-    width: 140px;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  color: white;
+  background-color: #17BEBB;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left 10px;
+  padding-right 10px;
+  width: 140px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 
@@ -417,6 +401,12 @@ input, select {
 }
 
 
+.select_field {
+  background: white;
+  text-decoration: none;
+}
+
+
 .save_button_venue {
   width: 90px;
   height: 40px;
@@ -459,8 +449,5 @@ input, select {
 }
 
 
-.select_field {
-    background: white;
-    text-decoration: none;
-}
+
 
