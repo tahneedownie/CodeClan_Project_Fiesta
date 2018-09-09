@@ -58,8 +58,9 @@ public class VisitorController {
 
             String firstName = request.queryParams("firstName");
             String lastName = request.queryParams("lastName");
+            String email = request.queryParams("email");
 
-            Visitor visitor = new Visitor(firstName, lastName);
+            Visitor visitor = new Visitor(firstName, lastName, email);
             DBHelper.save(visitor);
 
             response.redirect("/visitors");
@@ -108,9 +109,11 @@ public class VisitorController {
 
             String firstName = request.queryParams("firstName");
             String lastName = request.queryParams("lastName");
+            String email = request.queryParams("email");
 
             visitor.setFirstName(firstName);
             visitor.setLastName(lastName);
+            visitor.setEmail(email);
 
             DBHelper.save(visitor);
 

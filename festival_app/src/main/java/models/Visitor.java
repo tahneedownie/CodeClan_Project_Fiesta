@@ -13,14 +13,16 @@ public class Visitor {
     private int id;
     private String firstName;
     private String lastName;
+    private String email;
     private List<Performance> performances;
 
     public Visitor() {
     }
 
-    public Visitor(String firstName, String lastName) {
+    public Visitor(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.performances = new ArrayList<>();
     }
 
@@ -52,6 +54,11 @@ public class Visitor {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Column(name= "email")
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
 
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @ManyToMany

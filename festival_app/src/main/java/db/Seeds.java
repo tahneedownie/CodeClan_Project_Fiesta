@@ -22,25 +22,25 @@ public class Seeds {
         DBHelper.deleteAll(Comedian.class);
 
 //        VISITORS__________________________________________________________________________________________________
-        Visitor visitor1 = new Visitor("Digory", "Eyebrow");
+        Visitor visitor1 = new Visitor("Digory", "Eyebrow", "digory@gmail.com");
         DBHelper.save(visitor1);
-        Visitor visitor2 = new Visitor("Molly", "Drummer");
+        Visitor visitor2 = new Visitor("Molly", "Drummer", "molly@hotmail.com");
         DBHelper.save(visitor2);
-        Visitor visitor3 = new Visitor("Vicky", "Jackson-Five");
+        Visitor visitor3 = new Visitor("Vicky", "Jackson-Five", "vicky@yahoo.com");
         DBHelper.save(visitor3);
-        Visitor visitor4 = new Visitor("Mike", "Thorpe-Park");
+        Visitor visitor4 = new Visitor("Mike", "Thorpe-Park", "mike@btinternet.com");
         DBHelper.save(visitor4);
-        Visitor visitor5 = new Visitor("Robbie", "Drumbells");
+        Visitor visitor5 = new Visitor("Robbie", "Drumbells", "robbie@gmail.com");
         DBHelper.save(visitor5);
-        Visitor visitor6 = new Visitor("Colin", "Riddles");
+        Visitor visitor6 = new Visitor("Colin", "Riddles", "colin@yahoo.com");
         DBHelper.save(visitor6);
-        Visitor visitor7 = new Visitor("Ricardio", "Ruiz");
+        Visitor visitor7 = new Visitor("Ricardio", "Ruiz", "ricardo@hotmail.com");
         DBHelper.save(visitor7);
-        Visitor visitor8 = new Visitor("Stuart", "Blue");
+        Visitor visitor8 = new Visitor("Stuart", "Blue", "stuart@btinternet.com");
         DBHelper.save(visitor8);
-        Visitor visitor9 = new Visitor("Gemma", "Prettigal");
+        Visitor visitor9 = new Visitor("Gemma", "Prettigal", "gemma@hotmail.com");
         DBHelper.save(visitor9);
-        Visitor visitor10 = new Visitor("BumbleBee", "Ficek");
+        Visitor visitor10 = new Visitor("BumbleBee", "Ficek", "bumblebee@yahoo.com");
         DBHelper.save(visitor10);
 
 //        LINEUPS___________________________________________________________________________________________________
