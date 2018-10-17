@@ -32,16 +32,6 @@ public class Seeds {
         DBHelper.save(visitor4);
         Visitor visitor5 = new Visitor("Robbie", "Drumbells", "robbie@gmail.com");
         DBHelper.save(visitor5);
-        Visitor visitor6 = new Visitor("Colin", "Riddles", "colin@yahoo.com");
-        DBHelper.save(visitor6);
-        Visitor visitor7 = new Visitor("Ricardio", "Ruiz", "ricardo@hotmail.com");
-        DBHelper.save(visitor7);
-        Visitor visitor8 = new Visitor("Stuart", "Blue", "stuart@btinternet.com");
-        DBHelper.save(visitor8);
-        Visitor visitor9 = new Visitor("Gemma", "Prettigal", "gemma@hotmail.com");
-        DBHelper.save(visitor9);
-        Visitor visitor10 = new Visitor("BumbleBee", "Ficek", "bumblebee@yahoo.com");
-        DBHelper.save(visitor10);
 
 //        LINEUPS___________________________________________________________________________________________________
         LineUp lineUp1 = new LineUp("local comedy", LocalDate.of(2018,8,24));
